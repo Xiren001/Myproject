@@ -95,6 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             default:
                 echo "Invalid question number. ";
+                echo "hi";
         }
     }
 }
