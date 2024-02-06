@@ -1,0 +1,85 @@
+:root {
+    --main-white: var(linear-gradient(90deg, rgb(225, 169, 204) 20%, rgb(166, 77, 166) 40%));
+    --main-red: #680076;
+    --main-blue: #45567d;
+    --main-gray: #303841;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+  @media (max-width: 75em) {
+    html {
+      font-size: 60%;
+    }
+  }
+  @media (max-width: 61.25em) {
+    html {
+      font-size: 58%;
+    }
+  }
+  @media (max-width: 28.75em) {
+    html {
+      font-size: 55%;
+    }
+  }
+body{
+    background-color:var(--main-white);
+}
+.div{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    border: 2px solid;
+    height: 100%;
+    width: 5%;
+    justify-content: center;
+    margin: 0;
+
+}
+.div ul{
+    list-style: none;
+    transform: rotate(-90deg);
+    display: flex;
+    height: auto;
+   
+
+}
+.div ul li{
+    text-decoration: none;
+    display: flex;
+    padding: 1rem;
+}
+
+.navbar{
+  border: 2px solid black;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 500px;
+  justify-content: center;
+
+}
+
+.navbar ul{
+  list-style: none;
+  display: flex;
+}
+.navbar ul li{
+  text-decoration: none;
+  display: flex;
+  padding: 1rem;
+}
