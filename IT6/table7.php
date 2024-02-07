@@ -1,7 +1,7 @@
 
 <?php
 
-require_once('database.PHP');
+require_once('INDEX.PHP');
 echo"<h1><q>job_history</q> Record.<h1>";
 
 

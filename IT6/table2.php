@@ -1,7 +1,7 @@
 
 <?php
 
-require_once('database.PHP');
+require_once('INDEX.PHP');
 echo"<h1><q>countries</q> Record.<h1>";
 
 

@@ -6,7 +6,7 @@ echo"<br><h1>This is my table.<h1>";
 
 
 $sql ="SELECT * FROM user_table";
-$query = $connection ->query($sql);
+$query = $conn ->query($sql);
 
 $num_rows = $query->num_rows;
 echo"The no. of rows is:" . $num_rows;
