@@ -6,7 +6,7 @@ echo"<br><h1>View Manager Table.<h1>";
 
 
 $sql ="SELECT * FROM view_manager";
-$query = $connection ->query($sql);
+$query = $conn ->query($sql);
 
 $num_rows = $query->num_rows;
 echo"The no. of rows is:" . $num_rows;
