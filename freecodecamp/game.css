@@ -10,11 +10,16 @@ body {
   
   #game {
     max-width: 500px;
-    max-height: 400px;
+    max-height: 800px;
     background-color: #ffffff;
     color: #ffffff;
     margin: 30px auto 0px;
     padding: 10px;
+  }
+
+  #image{
+    border: 1px solid #0a0a23;
+    height: 500px;
   }
   
   #controls,
