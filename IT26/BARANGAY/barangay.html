@@ -22,15 +22,77 @@
         </label>
         <nav class="nav">
             <a href="#" style="--i:0;">Home</a>
-            <a href="#" style="--i:1;">About me</a>
+            <a href="#" style="--i:1;">About us</a>
             <a href="#" style="--i:2;">Service</a>
             <a href="#" style="--i:3;">Projects</a>
+            
         </nav>
-        <div class="button-div">
-        <button class="button-login" role="button" type="button">Login</button>
-        <button class="button-register" role="button" type="button">Register</button>
+        <div class="btn-div">
+        <button class="btnLogin-popup">Login</button>
         </div>
     </header>
+
+    <!--button-->
+<div class="container-wrapper">
+    <div class="wrapper">
+        <span class="icon-close"><ion-icon name="close-outline"></ion-icon>
+        </span>
+
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label> <input type="checkbox">Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account?<a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person-circle"></ion-icon></span>
+                    <input type="text" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label> <input type="checkbox">I agree to the terms & conditions</label>
+                  
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register">
+                    <p>Already have an account?<a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    <!--button-->
 
     <div class="p-1 text-white text-center logo-text">
         <div class="container">
@@ -48,13 +110,10 @@
                 </div>
             </div>
             <div class="p-1 div-2">
-                
                 <div class="img-fluid captain-pic">
                     <img class="cap-img" src="grim.png" alt="">
                 </div>
-    
             </div>
-
         </div>
     </div>
 
@@ -66,33 +125,6 @@
     <div class="container mt-5">
         <div class="row">
 
-            <div class="col-sm-4">
-
-                <ul class="nav nav-pills flex-column car-link">
-                    <li id="19" class="nav-item">
-                        <a class="nav-link active" href="#1">1993-2002 Supra Twin Turbo MKIV TT</a>
-                    </li>
-                    <li id="20" class="nav-item">
-                        <a class="nav-link" href="#2">1986.5 - 1992 MK3 MKIII Supra (Turbo & Non-Turbo)</a>
-                    </li>
-                    <li id="21" class="nav-item">
-                        <a class="nav-link" href="#3">Toyota Supra Mk4 Twin Turbo 1993-2002</a>
-                    </li>
-                    <li id="21" class="nav-item">
-                        <a class="nav-link" href="#4">Toyota Celica Supra 1982-1985</a>
-                    </li>
-                    <li id="21" class="nav-item">
-                        <a class="nav-link" href="#5">Toyota Supra 1986-1992</a>
-                    </li>
-                    <li id="21" class="nav-item">
-                        <a class="nav-link" href="#6">Toyota Supra 2020</a>
-                    </li>
-                    <li id="21" class="nav-item">
-                        <a class="nav-link" href="#7">Toyota GR Supra Turbo 2023</a>
-                    </li>
-                </ul>
-                <hr class="d-sm-none">
-            </div>
             <div id="cars" class="col-sm-8">
 
 
@@ -169,6 +201,11 @@
     <div class="mt-5 p-4 bg-dark text-white text-center">
         <p>Copy right Dungca</p>
     </div>
+
+    <script src="barangay.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
 
 </body>
 
