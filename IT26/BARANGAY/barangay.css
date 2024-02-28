@@ -544,7 +544,7 @@ p {
    justify-content: center;
    text-align: center;
    color: #0C2D57;
-   padding: 150px 50px 50px 50px;
+   padding: 100px 50px 10px 50px;
 }
 .about-content{
    gap: 20px;
@@ -583,15 +583,35 @@ p {
 }
 
 
-/*cou*/
+/*carousel start*/
 
 .carousel-item{
    height: 35rem;
    
 }
+@media(max-width:742px) {
+   .carousel-item{
+      height: auto;
+      
+   }
+}
 .carousel-inner{
    border-radius: 20px;
 }
+/*carousel end*/
+
+/*b-mission start*/
+
+.barangay-div{
+   
+}
+
+
+
+
+
+/*b-mission end*/
+
 
 
 

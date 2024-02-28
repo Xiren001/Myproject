@@ -7,6 +7,13 @@ const btnPopupContact = document.querySelector(".btnContact-popup");
 const iconClose = document.querySelector(".icon-close");
 const closes = document.querySelector(".closes");
 
+function clearContact(){
+  const formContact = document.getElementById('con-form');
+  formContact.submit();
+  formContact.reset();
+}
+
+
 registerLink.addEventListener("click", () => {
   wrapper.classList.add("active");
 });
@@ -27,3 +34,4 @@ iconClose.addEventListener("click", () => {
 closes.addEventListener("click", () => {
   wrappers.classList.remove("active-popup");
 });
+
