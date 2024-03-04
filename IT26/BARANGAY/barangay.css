@@ -462,7 +462,7 @@
 .logo-text {
    display: flex;
    background-color: #0C2D57;
-   height: 700px;
+   height: 90vh;
    flex-direction: column;
 }
 .logo-div {
