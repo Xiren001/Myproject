@@ -10,6 +10,19 @@ body {
     background-size: cover;
     background-position: center;
 }
+.container-div{
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+}
+
+.header{
+    border: 2px solid white;
+    position: fixed;
+    width: 100%;
+    height: 5rem;
+}
 .sidebar{
     position: fixed;
     top: 0;
@@ -22,10 +35,12 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     padding: 6px 14px;
     transition: .5s;
+    z-index: 1;
 }
 .sidebar.active{
     width: 260px;
 }
+
 .sidebar .logo-menu{
     display: flex;
     align-items: center;
@@ -68,7 +83,6 @@ body {
     list-style: none;
     width: 100%;
     height: 50px;
-    
     margin: 5px 0;
     line-height: 50px;
 }
@@ -100,4 +114,56 @@ body {
 .sidebar.active .link-name{
 opacity: 1;
 pointer-events: auto;
+}
+
+div hr{
+    color: #FBB040;
+    background-color: #FBB040;
+}
+.menu nav ul div p{
+    font-size: .75em;
+    color: #FBB040;
+}
+.men-p{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.invi-div{
+    border: 2px solid white;
+    width: 80px;
+    min-width: 80px;
+    height: 100%;
+    transition: .5s;
+}
+.invi-div.active{
+    width: 260px;
+    min-width: 260px;
+}
+
+.contents-div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5rem 0 5rem 3rem;
+    gap: 2rem;
+    transition: .5s;
+}
+.contents-div.active{
+    padding: 5rem 0 5rem 6.5rem;
+}
+.dashboard-content{
+    border: 2px solid white;
+    position: relative;
+    width: 450px;
+    min-width: 450px;
+    height: 300px;
+    top:5rem ;
+    transition: .5s;
+}
+
+.dashboard-content.active{
+    width: 350px ;
+    min-width: 350px;
 }
