@@ -589,6 +589,9 @@ p {
    height: 35rem;
    
 }
+.carouse{
+   padding-left: 3rem;
+}
 @media(max-width:742px) {
    .carousel-item{
       height: auto;
@@ -603,7 +606,11 @@ p {
 /*b-mission start*/
 
 .barangay-div{
-   
+   background-image: url('1291412.jpg');
+   background-position: center;
+   background-size: cover;
+   height: 100vh;
+   margin-top: 5rem;
 }
 
 
