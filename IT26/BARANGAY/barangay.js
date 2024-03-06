@@ -12,8 +12,6 @@ function clearContact(){
   formContact.submit();
   formContact.reset();
 }
-
-
 registerLink.addEventListener("click", () => {
   wrapper.classList.add("active");
 });
