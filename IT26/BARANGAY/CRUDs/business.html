@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up Form</title>
+        <link rel="stylesheet" href="https://codepen.io/gymratpacks/pen/VKzBEp#0">
+        <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="business.css">
+        
+    </head>
+      <div class="row">
+    <div class="col-md-12">
+      <form action="index.html" method="post">
+        <h2> BARANGAY BUSINESS PERMIT </h2>
+        <div class="row2">
+          <legend><span class="number"></span> Requirements </legend>
+          <label for="name">BARANGAY CLEARANCE</label>
+          <legend><span class="number"></span> Payment Details</legend>
+          <label for="name">Payment Fees: P 100.00</label>
+          <label for="name">Gcash:09953695007</label>
+      </div>
+      <br>
+      <br>
+        <fieldset>
+          
+        
+          <label for="name">Tracking code</label>
+          <input type="text" id="name" name="user_name">
+       
+          <label for="password">Pick-up date</label>
+          <input type="date" id="password"       name="user_password">
+        
+        </fieldset>
+        <label for="job">Payment Method:</label>
+        <select id="job" name="user_job">
+          
+            <option value="android_developer">Cash on Pick-up</option>
+            <option value="ios_developer">Gcash</option>
+        </select>
+        <label for="name">Reference No(for Gcash Payment only)</label>
+          <input type="text" id="name" name="user_name" placeholder="Enter Gcash Reference No.">
+          <div class="file1">
+            <label for="job">Upload Tax Certificate</label>
+
+          <button class="input-file">
+            <input type="file" id="file-input"/>
+          <i class="fa-solid fa-plus" style="color: black;"></i> 
+          </button>
+          <label for="job">Upload DTI Permit</label>
+          <button class="input-file"> 
+            <input type="file" id="file-input" />
+           <i class="fa-solid fa-plus" style="color: black;"></i>
+          </button>
+        </div>
+        <fieldset>  
+          
+         <label for="bio">Purpose</label>
+          <textarea id="bio" name="user_bio" placeholder="Enter Purpose"></textarea>
+          
+         </fieldset>
+       
+        <button type="submit">Submit</button>
+        
+       </form>
+        </div>
+      </div>
+      <script src="https://kit.fontawesome.com/f30525b22c.js" 
+    crossorigin="anonymous"></script>
+    </body>
+</html>
