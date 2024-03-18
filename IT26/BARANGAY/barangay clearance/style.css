@@ -1,115 +1,155 @@
-#main {
-  height: 1500px;
-  width: 1000px;
-  margin: auto;
-  display: none;
-  margin-top: 50px;
-  border: 6px solid black;
-  position: relative;
-  background-color: white;
-}
-
-img {
-  width: 200px;
-  height: auto;
-}
-.font-text {
-  text-align: center;
-  padding: 2% 0;
-}
-.font1-text {
-  padding-left: 80px;
-}
-.font2-text {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  text-align: justify;
-  padding: 0 70px;
-  margin: 0;
-  font-size: x-large;
-}
-.font3-text {
-  text-align: right;
-  padding-right: 80px;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-.font4-text {
-  display: flex;
-  text-align: justify;
-  height: 30px;
-  padding-left: 80px;
-  font-size: x-large;
-  flex-direction: column;
-}
-
-.img-div {
-  height: 0;
-}
-.cert-div {
-  display: flex;
-  width: 900px;
-  margin: auto;
-  margin-top: 25px;
-  margin-left: 45px;
-}
-.text-div {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  font-size: large;
-  padding: 1em 0;
-  text-align: center;
-}
-.text-p {
-  margin: 5px 0;
-  font-weight: bold;
-}
-.brg-text {
-  font-size: 3em;
-}
-.line {
-  border: 1px solid black;
-  margin: 1px 50px;
-}
-
-.font5 {
-  display: flex;
-  justify-content: center;
-}
-.text5 {
-  display: flex;
-  height: 50px;
-}
-.bar {
-  position: relative;
-  display: block;
-  width: 100%;
-}
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-family: Helvetica;
   background: #eee;
   -webkit-font-smoothing: antialiased;
 }
 
-form {
-  width: 380px;
-  margin: 4em auto;
+#main {
+  height: 100%;
+  width: 50%;
+  margin: auto;
+
+  margin-top: 2em;
+  border: 6px solid black;
+  position: relative;
+  background-color: white;
+}
+
+.cert-div {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-div {
+  width: 25%;
+  height: 100%;
+  align-items: center;
+  padding: 1.5rem 0.5rem;
+}
+
+img {
+  width: 180px;
+  height: auto;
+}
+
+.text-div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  padding-right: 11rem;
+}
+
+.brg-text {
+  font-size: 2.4em;
+}
+
+.text-p {
+  margin: 2px 0;
+  font-weight: bold;
+}
+
+.line {
+  border: 1px solid black;
+  margin: 1px 50px;
+}
+
+.font-text {
+  text-align: center;
+  padding: 2% 0;
+}
+
+.font1-text {
+  padding-left: 70px;
+}
+
+.font2-text {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  text-align: justify;
+  padding: 2rem 70px;
+  margin: 0;
+  font-size: 1em;
+}
+
+.font2-text p {
+  margin: 0;
+}
+
+.text2p {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.text2p p {
+  text-align: start;
+}
+
+.text2p p:nth-child(1) {
+  margin-left: 5rem;
+}
+
+.font3-text {
+  text-align: right;
+  padding-right: 80px;
+
+  margin: 0;
+  padding-top: 2rem;
+}
+
+.font3-text h3,
+.font3-text p {
+  margin: 5px;
+}
+
+.font4-text {
+  display: flex;
+  text-align: justify;
+  padding-left: 70px;
+  font-size: medium;
+  flex-direction: column;
+
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.font4-text p {
+  margin: 5px;
+}
+
+.text5 {
+  display: flex;
+  flex-direction: row;
+}
+
+.text6 {
+  display: flex;
+  flex-direction: row;
+}
+
+.text7 {
+  display: flex;
+  flex-direction: row;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Form Styling */
+#cform {
+  width: 35%;
+  height: 100vh;
+  margin: 2em 1em 2rem 4em;
   padding: 3em 2em 2em 2em;
   background: #fafafa;
   border: 1px solid #ebebeb;
   box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 1px 0px,
     rgba(0, 0, 0, 0.09804) 0px 1px 2px 0px;
-}
-
-.group {
-  position: relative;
-  margin-bottom: 45px;
 }
 
 input {
@@ -128,101 +168,25 @@ input:focus {
   outline: none;
 }
 
-/* Label */
-
 label {
-  color: #999;
+  color: #000000;
   font-size: 18px;
   font-weight: normal;
-  position: absolute;
   pointer-events: none;
   left: 5px;
   top: 10px;
   transition: all 0.2s ease;
 }
 
-/* active */
-
 input:focus ~ label,
 input.used ~ label {
   top: -20px;
   transform: scale(0.75);
   left: -2px;
-  /* font-size: 14px; */
   color: #4a89dc;
 }
 
-/* Underline */
-
-.bar {
-  position: relative;
-  display: block;
-  width: 100%;
-}
-
-.bar:before,
-.bar:after {
-  content: "";
-  height: 2px;
-  width: 0;
-  bottom: 1px;
-  position: absolute;
-  background: #4a89dc;
-  transition: all 0.2s ease;
-}
-
-.bar:before {
-  left: 50%;
-}
-
-.bar:after {
-  right: 50%;
-}
-
-/* active */
-
-input:focus ~ .bar:before,
-input:focus ~ .bar:after {
-  width: 50%;
-}
-
-/* Highlight */
-
-.highlight {
-  position: absolute;
-  height: 60%;
-  width: 100px;
-  top: 25%;
-  left: 0;
-  pointer-events: none;
-  opacity: 0.5;
-}
-
-/* active */
-
-input:focus ~ .highlight {
-  animation: inputHighlighter 0.3s ease;
-}
-
-/* Animations */
-
-@keyframes inputHighlighter {
-  from {
-    background: #4a89dc;
-  }
-  to {
-    width: 0;
-    background: transparent;
-  }
-}
-
-/* Add these styles to your style.css file */
-
-#chform {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
+/* Additional Styling */
 #cform p {
   margin-top: 10px;
   font-size: 14px;
@@ -251,4 +215,7 @@ input:focus ~ .highlight {
   background-color: #0c2d57;
 }
 
-/* Optional: You can add more styles as needed */
+.container {
+  display: flex;
+  flex-direction: row;
+}
