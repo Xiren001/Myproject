@@ -159,17 +159,6 @@
   transform: translateX(-600px);
 }
 
-.wrapper .form-box.register {
-  position: absolute;
-  transition: none;
-  transform: translateX(600px);
-}
-
-.wrapper.active .form-box.register {
-  transition: transform 0.18s ease;
-  transform: translateX(0);
-}
-
 .wrapper .form-box.contact {
   transition: transform 0.18s ease;
   transform: translateX(0);
@@ -283,29 +272,6 @@
   padding: 0 35px 0 5px;
 }
 
-.remember-forgot {
-  font-size: 0.9em;
-  color: #fbb040;
-  font-weight: 500;
-  margin: -15px 0 15px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.remember-forgot label input {
-  accent-color: #fbb040;
-  margin-right: 3px;
-}
-
-.remember-forgot a {
-  color: #fbb040;
-  text-decoration: none;
-}
-
-.remember-forgot a:hover {
-  text-decoration: underline;
-}
-
 .btn {
   width: 100%;
   height: 45px;
@@ -323,23 +289,7 @@
   color: #fbb040;
 }
 
-.login-register {
-  font-size: 0.9em;
-  color: #fbb040;
-  text-align: center;
-  font-weight: 500;
-  margin: 25px 0 10px;
-}
 
-.login-register p a {
-  color: #fbb040;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.login-register p a:hover {
-  text-decoration: underline;
-}
 
 /*login end*/
 
