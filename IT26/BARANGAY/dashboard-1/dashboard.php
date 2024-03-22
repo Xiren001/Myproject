@@ -1,3 +1,17 @@
+
+<?php
+require 'C:\xampp\htdocs\Myproject\IT26\BARANGAY\landing_page\function.php';
+
+$select = new Select();
+
+if(!empty($_SESSION["id"])){
+  $user = $select->selectUserById($_SESSION["id"]);
+}
+else{
+  header("Location: C:\xampp\htdocs\Myproject\IT26\BARANGAY\landing_page\barangay.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

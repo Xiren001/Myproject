@@ -1,3 +1,31 @@
+
+<?php
+require 'function.php';
+
+if(!empty($_SESSION["id"])){
+  header("Location: C:\xampp\htdocs\Myproject\IT26\BARANGAY\dashboard-1\dashboard.php");
+}
+
+$login = new Login();
+if(isset($_POST["submit"])){
+  $result = $login->login($_POST["usernameemail"], $_POST["password"]);
+
+  if($result == 1){
+    $_SESSION["login"] = true;
+    $_SESSION["id"] = $login->idUser();
+    header("Location: C:\xampp\htdocs\Myproject\IT26\BARANGAY\dashboard-1\dashboard.php");
+  }
+  elseif($result == 10){
+    echo
+    "<script> alert('Wrong Password'); </script>";
+  }
+  elseif($result == 100){
+    echo
+    "<script> alert('User Not Registered'); </script>";
+  }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,7 +69,7 @@
 
       <div class="form-box login">
         <h2><b>Employee Login</b></h2>
-        <form action="#">
+        <form class="" action="" method="post" autocomplete="off">
           <div class="input-box">
             <input type="text" name="usernameemail" required value="">
             <label for="">Username</label>
@@ -480,8 +508,6 @@
   </div>
 </footer>
 
-
-
   <script src="barangay.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -490,15 +516,3 @@
 
 </html>
 
-<?php
-require 'function.php';
-
-$select = new Select();
-
-if(!empty($_SESSION["id"])){
-  $user = $select->selectUserById($_SESSION["id"]);
-}
-else{
-  header("Location: login.php");
-}
-?>
