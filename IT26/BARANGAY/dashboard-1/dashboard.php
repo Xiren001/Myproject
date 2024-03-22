@@ -20,7 +20,7 @@
                 </div>
                 <div>
                     <div>
-                        <h6>MYKO XIREN</h6>
+                    <a href="logout.php"><h6>MYKO XIREN</h6></a>
                     </div>
                 </div>
             </div>
@@ -143,3 +143,4 @@
     <script src="dashboard.js"></script>
 </body>
 </html>
+
