@@ -32,6 +32,7 @@
   background: #0c2d57;
   z-index: -1;
   transition: background 0.3s ease;
+
 }
 
 .nav a {
@@ -85,6 +86,7 @@
     width: auto;
     transition: transform 0.3s ease;
   }
+
 }
 
 @media (max-width: 742px) {
@@ -117,7 +119,6 @@
     background: #0c2d57;
     backdrop-filter: blur(50px);
     border-radius:0 0 0 10%  ;
-    box-shadow: 0  0.5rem rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: 0.1 ease;
     transition: height 0.3s ease;
@@ -161,31 +162,25 @@
   min-width: auto;
 }
 .logo-div {
+  width: 20%;
   height: auto;
   display: flex;
   justify-content: flex-start;
+ 
 
 }
 
-@media (max-width: 742px) {
-  .logo-div {
-    justify-content: center;
-  }
-
-  .logo {
-    width: 100%;
-    max-width: 15rem;
-  }
+.log-h{
+  display: flex;
 }
-
 
 .h1-div{
-  width: 100%;
+  width: 80%;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 10rem;
+  
 }
 
 .h1-div h1{
@@ -195,9 +190,6 @@
   color: #fbb040;
 }
 
-.log-h{
-  display: flex;
-}
 
 .accordion-div{
   margin-top: 5rem;
@@ -213,6 +205,67 @@
 .accordion-item{
   margin-top: .5rem;
 }
+
+@media (max-width: 1000px) {
+  .logo-div {
+    justify-content: center;
+  }
+
+  .logo {
+    width: 100%;
+    max-width: 15rem;
+    min-width: 10rem;
+  }
+  .h1-div h1{
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .logo-div {
+    justify-content: center;
+  }
+
+  .logo {
+    width: 100%;
+    max-width: 15rem;
+    min-width: 10rem;
+  }
+  .h1-div h1{
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .logo-div{
+    width: 100%;
+  }
+  .h1-div{
+    width: 100%;
+    padding-top: 1rem !important;
+    padding-bottom: 2rem !important;
+  }
+  .log-h{
+    display: flex;
+    flex-direction: column;
+  }
+  .accordion-div{
+    display: flex;
+    flex-direction: column;
+  }
+  .accordion{
+    width: 100%;
+  }
+  .accordion:nth-child(2){
+    margin-top: 4rem;
+  }
+
+}
+
+
+
+
+
 
 
 
