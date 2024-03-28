@@ -120,8 +120,6 @@
     backdrop-filter: blur(50px);
     border-radius:0 0 0 10%  ;
     overflow: hidden;
-    transition: 0.1 ease;
-    transition: height 0.3s ease;
     margin-left: 80%;
     transition: all 0.3s ease;
   
@@ -191,21 +189,10 @@
   color: #fbb040;
 }
 
-
-.accordion-div{
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-  display: flex;
-
+.privacy_contents{
+  padding: 5rem 0;
 }
 
-.accordion{
-  width: 70%;
-  padding: 0 .5rem;
-}
-.accordion-item{
-  margin-top: .5rem;
-}
 
 @media (max-width: 1000px) {
   .logo-div {
@@ -249,16 +236,6 @@
   .log-h{
     display: flex;
     flex-direction: column;
-  }
-  .accordion-div{
-    display: flex;
-    flex-direction: column;
-  }
-  .accordion{
-    width: 100%;
-  }
-  .accordion:nth-child(2){
-    margin-top: 4rem;
   }
 
 }

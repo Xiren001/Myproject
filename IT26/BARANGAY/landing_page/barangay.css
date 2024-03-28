@@ -305,7 +305,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: font-size 0.3s ease, color 0.3s ease, font-weight 0.3s ease ;
+  transition: all 0.3s ease ;
 
 }
 
@@ -315,6 +315,7 @@
   justify-content: center;
   margin-left: 40px;
   flex-wrap: nowrap;
+  transition: all 0.3s ease;
 }
 
 .nav a:hover{
@@ -410,8 +411,7 @@
     border-radius:0 0 0 10%  ;
     box-shadow: 0  0.5rem rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: 0.1 ease;
-    transition: height 0.3s ease;
+    transition: all 0.3s ease;
     margin-left: 80%;
   }
 
