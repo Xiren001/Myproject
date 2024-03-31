@@ -61,35 +61,75 @@
           <form action="" method="">
 
             <fieldset class="f1">
+              <div>
               <label for="tracking">Tracking code</label>
-              <input type="text" id="tracking" name="tracking">
-
-              <label for="name">Full Name</label>
-              <input type="text" id="name" name="name">
-
-              <label for="date">Pick-up date</label>
-              <input type="date" id="date" name="date">
+              <input type="text" id="tracking" name="tracking" readonly>
+              </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="f2">
+              <div>
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter Your Full Name">
+              </div>
+              <div>
+              <label for="address">Address</label>
+              <input type="text" id="address" name="address" placeholder="Enter Your Address">
+              </div>
+              <div>
+              <label for="dateb">Date of Birth</label>
+              <input type="date" id="dateb" name="dateb" >
+              </div>
+              </fieldset>
+
+              <fieldset class="f3">
+              <div>
+              <label for="number">Contact Number</label>
+              <input type="number" id="number" name="number" placeholder="Enter Your Contact No.">
+              </div>
+              <div>
+              <label for="date">Pick-up date</label>
+              <input type="date" id="date" name="date">
+              </div>
+            </fieldset>
+
+            <fieldset class="f4">
+              <div>
+                <div>
               <label for="upload_file">Upload valid ID</label>
-              <input type="file" name="upload_file" class="form-control" placeholder="Enter Name" id="upload_file" accept="image/*" onchange="getImagePreview(event)">
+              <input type="file" name="upload_file" class="form-control"  id="upload_file" accept="image/*" onchange="getImagePreview(event)">
+                </div>
                 <div id="preview" class="img-area col-md-4" data-img="">
                   <i class='bx bxs-cloud-upload icon-UP'></i>
                   <h3>Upload Image</h3>
                   <p>Image size must be less than <span>2MB</span></p>
                </div>
+               </div>
+              <div>
+                <div>
+              <label for="upload_file_sig">Upload Signiture</label>
+              <input type="file" name="upload_file_sig" class="form-control"  id="upload_file_sig" accept="image/*" onchange="getImagePreview1(event)">
+                </div>
+                <div id="preview1" class="img-area col-md-4" data-img="">
+                  <i class='bx bxs-cloud-upload icon-UP'></i>
+                  <h3>Upload Image</h3>
+                  <p>Image size must be less than <span>2MB</span></p>
+               </div>
+               </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="f5">
+              <div>
               <label for="payment">Payment Method:</label>
               <select id="payment" name="payment">
                 <option value="cash">Cash on Pick-up</option>
                 <option value="Gcash">Gcash</option>
               </select>
-
+              </div>
+              <div>
               <label for="ref">Reference No(for Gcash Payment only)</label>
               <input type="text" id="ref" name="ref" placeholder="Enter Gcash Reference No.">
+              </div>
             </fieldset>
 
             <fieldset>

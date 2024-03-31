@@ -239,7 +239,6 @@
 
 .form-div{
   width: 100%;
-  border: 1px solid black;
 }
 
 
@@ -251,10 +250,18 @@ form {
   width: 100%;
   display: flex;
   flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 input[type="text"],
 input[type="date"],
+input[type="number"],
 textarea,
 select {
   background: rgba(255,255,255,0.1);
@@ -270,17 +277,12 @@ select {
   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
   margin-bottom: 30px;
 }
-
-select {
-  padding: 6px;
-  height: 32px;
-  border-radius: 2px;
-}
 .submit-btn {
-  padding: 19px 39px 18px 39px;
+  padding: 9px 39px 8px 39px;
   color: #FFF;
   background-color: #0C2D57;
   font-size: 18px;
+  font-weight: bold;
   text-align: center;
   font-style: normal;
   border-radius: 5px;
@@ -290,8 +292,13 @@ select {
   box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
   margin-bottom: 10px;
 }
+
+.submit-btn:hover{
+  color: #fbb040;
+  background-color: #092242;
+}
 fieldset {
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   border: none;
 }
 
@@ -301,14 +308,68 @@ label {
 }
 
 
+.f2{
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+.f2 div{
+  width: 100%;
+}
 
+.f3{
+  display: flex;
+  gap: 1rem;
+  width: 50%;
+}
+.f3 div{
+  width: 50%;
+}
 
+.f4{
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+.f4 div{
+  width: 50%;
+  gap: 1rem;
+}
 
+input[type="file"]{
+  color: #8a97a0;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  padding: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+}
 
+.f5{
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+.f5 div{
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .f1, .f2, .f3, .f4, .f5{
+    display: block;
+  }
+  .f3, .f3 div{
+    width: 100%;
+  }
+  .f4 div{
+    width: 100%;
+  }
+}
 
 .img-area {
 	position: relative;
-	width: 100%;
+	width: 100% !important;
 	height: 240px;
 	background: #e8eeef;
 	margin-bottom: 30px;
@@ -334,6 +395,8 @@ label {
 	font-weight: 600;
 }
 
+
+
 .img-area::before {
 	width: 100%;
 	height: 100%;
@@ -352,7 +415,8 @@ label {
 
 .img-area img{
   z-index: 1;
-  width: auto;
+  height: 100%;
+  padding: 5px;
 	object-position: center;
 }
 .img-area.active:hover::before {
