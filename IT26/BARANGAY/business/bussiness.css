@@ -237,10 +237,23 @@
 
 }
 
+.req{
+ width: 100%;
+}
+.req-div{
+  margin: 70px auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
 .form-div{
   width: 100%;
 }
-
 
 form {
   margin: 70px auto;
@@ -291,6 +304,10 @@ select {
   border-width: 1px 1px 3px;
   box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
   margin-bottom: 10px;
+}
+
+.f5 div select{
+  margin-bottom: 5px;
 }
 
 .submit-btn:hover{
@@ -353,6 +370,10 @@ input[type="file"]{
 }
 .f5 div{
   width: 100%;
+}
+.f5 div p{
+  font-size: smaller;
+  color: #999;
 }
 
 @media screen and (max-width: 767px) {

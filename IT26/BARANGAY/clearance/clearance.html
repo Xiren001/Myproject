@@ -36,7 +36,7 @@
         <img class="logo img-responsive" src="LOGO.png" alt="logo" />
       </div>
       <div class="p-1 h1-div">
-        <h1> Barangay clearance </h1>
+        <h1> Barangay Clearance </h1>
       </div>
     </div>
 
@@ -57,6 +57,12 @@
   </div>
 
   <div class="back">
+    <div class="container req">
+      <div class="req-div">
+        <p><b>Note:</b> Please make sure to provide accurate information in the form below. Processing of Barangay clearance may take up to 1-2hrs. Make sure to upload valid IDs and follow the instructions carefully. For Gcash payments, please provide the reference number in the designated field. Thank you.</p>
+      </div>
+    </div>
+
     <div class="container form-div">
           <form action="" method="">
 
@@ -107,7 +113,7 @@
                </div>
               <div>
                 <div>
-              <label for="upload_file_sig">Upload Signiture</label>
+              <label for="upload_file_sig">Upload Cedula (Community Tax Certificate)</label>
               <input type="file" name="upload_file_sig" class="form-control"  id="upload_file_sig" accept="image/*" onchange="getImagePreview1(event)">
                 </div>
                 <div id="preview1" class="img-area col-md-4" data-img="">
@@ -125,9 +131,10 @@
                 <option value="cash">Cash on Pick-up</option>
                 <option value="Gcash">Gcash</option>
               </select>
+              <p>Note: For Gcash you can send it to this number 09922521838</p>
               </div>
               <div>
-              <label for="ref">Reference No(for Gcash Payment only)</label>
+              <label for="ref">Reference No: (for Gcash Payment only)</label>
               <input type="text" id="ref" name="ref" placeholder="Enter Gcash Reference No.">
               </div>
             </fieldset>
