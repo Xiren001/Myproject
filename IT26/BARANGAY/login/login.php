@@ -2,7 +2,7 @@
 require 'function.php';
 
 if(!empty($_SESSION["id"])){
-  header("Location: index.php");
+  header("Location: C:\xampp\htdocs\Myproject\IT26\BARANGAY\loginn\index.php");
 }
 
 $login = new Login();
@@ -13,7 +13,7 @@ if(isset($_POST["submit"])){
   if($result == 1){
     $_SESSION["login"] = true;
     $_SESSION["id"] = $login->idUser();
-    header("Location: index.php");
+    header("Location: C:\xampp\htdocs\Myproject\IT26\BARANGAY\loginn\index.php");
   }
   elseif($result == 10){
     echo
