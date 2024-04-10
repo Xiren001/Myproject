@@ -19,10 +19,10 @@
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-	<h1 class="page-header text-center">PHP CRUD using OOP Approach</h1>
-	<div class="row">
-		<div class="col-sm-8 col-sm">
+<div class="">
+	<h1 class="page-header">PHP CRUD using OOP Approach</h1>
+	<div class="">
+		<div class="">
 			<?php
 				if(isset($_SESSION['message'])){
 					?>
@@ -75,8 +75,6 @@
 						<th>occupation</th>
 						<th>disabilities</th>
 						<th>emergency_contacts</th>
-
-
 						<th>Action</th>
 					</tr>
 				</thead>
