@@ -307,10 +307,100 @@ table.table .avatar {
 }
 .modal-dialogs{
     width: 100% !important;
-    padding: 2rem 5rem !important;
+    padding: 5rem 20rem !important;
 }
 
 .row{
     display: flex;
-    
+    gap: 1rem;
+    padding: 1rem 0;
 }
+.con-modal{
+    display: flex;
+    flex-direction: column;
+}
+.img-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-area{
+    border: 1px solid black;
+}
+.img-area {
+	position: relative;
+	width: 180px !important;
+	height: 180px;
+	background: #e8eeef;
+	border-radius: 15px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.img-area .icon-UP {
+	font-size: 100px;
+}
+.img-area h3 {
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 6px;
+}
+
+.img-area::before {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
+	color: #fff;
+	font-weight: 500;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	pointer-events: none;
+	opacity: 0;
+	transition: all .3s ease;
+	z-index: 1;
+}
+
+.img-area img{
+  z-index: 1;
+  height: 100%;
+  padding: 5px;
+  object-position: center;
+}
+
+label.labels input[type="file"] {
+    position: absolute;
+    top: -1000px;
+  }
+  .labels {
+    cursor: pointer;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin: 5px;
+    background: #0397d6;
+    display: inline-block;
+    height: 100% !important;
+    color: #ffffff;
+  }
+  .labels:hover {
+    background: #a3c0df;
+  }
+  .labels:active {
+    background: #0397d6;
+  }
+  .labels:invalid + span {
+    color: #000000;
+  }
+  .labels:valid + span {
+    color: #ffffff;
+  }
+
+  .select-div{
+    height: 30px;
+  }
