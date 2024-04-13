@@ -96,15 +96,7 @@
 						<input type="text" name="block" class="form-control" value="<?php echo $row['block']; ?>">
 					</div>
 				</div>
-				<div style="height:10px;"></div>
-				<div class="row">
-					<div class="col-lg-2">
-						<label style="position:relative; top:7px;">lot:</label>
-					</div>
-					<div class="col-lg-10">
-						<input type="text" name="lot" class="form-control" value="<?php echo $row['lot']; ?>">
-					</div>
-				</div>
+				
 				<div style="height:10px;"></div>
 				<div class="row">
 					<div class="col-lg-2">
@@ -202,24 +194,7 @@
 						<input type="text" name="religion" class="form-control" value="<?php echo $row['religion']; ?>">
 					</div>
 				</div>
-				<div style="height:10px;"></div>
-				<div class="row">
-					<div class="col-lg-2">
-						<label style="position:relative; top:7px;">height:</label>
-					</div>
-					<div class="col-lg-10">
-						<input type="text" name="height" class="form-control" value="<?php echo $row['height']; ?>">
-					</div>
-				</div>
-				<div style="height:10px;"></div>
-				<div class="row">
-					<div class="col-lg-2">
-						<label style="position:relative; top:7px;">weight:</label>
-					</div>
-					<div class="col-lg-10">
-						<input type="text" name="weight" class="form-control" value="<?php echo $row['weight']; ?>">
-					</div>
-				</div>
+				
 				<div style="height:10px;"></div>
 				<div class="row">
 					<div class="col-lg-2">
@@ -256,33 +231,7 @@
 						<input type="text" name="contact_number" class="form-control" value="<?php echo $row['contact_number']; ?>">
 					</div>
 				</div>
-				<div style="height:10px;"></div>
-				<div class="row">
-					<div class="col-lg-2">
-						<label style="position:relative; top:7px;">bussiness_name:</label>
-					</div>
-					<div class="col-lg-10">
-						<input type="text" name="bussiness_name" class="form-control" value="<?php echo $row['bussiness_name']; ?>">
-					</div>
-				</div>
-				<div style="height:10px;"></div>
-				<div class="row">
-					<div class="col-lg-2">
-						<label style="position:relative; top:7px;">bussiness_permit:</label>
-					</div>
-					<div class="col-lg-10">
-						<input type="text" name="bussiness_permit" class="form-control" value="<?php echo $row['bussiness_permit']; ?>">
-					</div>
-				</div>
-				<div style="height:10px;"></div>
-				<div class="row">
-					<div class="col-lg-2">
-						<label style="position:relative; top:7px;">purok_id:</label>
-					</div>
-					<div class="col-lg-10">
-						<input type="text" name="purok_id" class="form-control" value="<?php echo $row['purok_id']; ?>">
-					</div>
-				</div>
+				
 				<div style="height:10px;"></div>
 				<div class="row">
 					<div class="col-lg-2">
@@ -292,33 +241,8 @@
 						<input type="text" name="household_id" class="form-control" value="<?php echo $row['household_id']; ?>">
 					</div>
 				</div>
-				<div style="height:10px;"></div>
-				<div class="row">
-					<div class="col-lg-2">
-						<label style="position:relative; top:7px;">monthly_income:</label>
-					</div>
-					<div class="col-lg-10">
-						<input type="text" name="monthly_income" class="form-control" value="<?php echo $row['monthly_income']; ?>">
-					</div>
-				</div>
-				<div style="height:10px;"></div>
-				<div class="row">
-					<div class="col-lg-2">
-						<label style="position:relative; top:7px;">city:</label>
-					</div>
-					<div class="col-lg-10">
-						<input type="text" name="city" class="form-control" value="<?php echo $row['city']; ?>">
-					</div>
-				</div>
-				<div style="height:10px;"></div>
-				<div class="row">
-					<div class="col-lg-2">
-						<label style="position:relative; top:7px;">province:</label>
-					</div>
-					<div class="col-lg-10">
-						<input type="text" name="province" class="form-control" value="<?php echo $row['province']; ?>">
-					</div>
-				</div>
+				
+				
 				<div style="height:10px;"></div>
 				<div class="row">
 					<div class="col-lg-2">
