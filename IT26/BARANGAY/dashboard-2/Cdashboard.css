@@ -373,37 +373,21 @@ table.table .avatar {
   object-position: center;
 }
 
-label.labels input[type="file"] {
-    position: absolute;
-    top: -1000px;
-  }
-  .labels {
-    cursor: pointer;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    padding: 5px 15px;
-    margin: 5px;
-    background: #0397d6;
-    display: inline-block;
-    height: 100% !important;
-    color: #ffffff;
-  }
-  .labels:hover {
-    background: #a3c0df;
-  }
-  .labels:active {
-    background: #0397d6;
-  }
-  .labels:invalid + span {
-    color: #000000;
-  }
-  .labels:valid + span {
-    color: #ffffff;
-  }
-
-  .select-div{
-    height: 30px;
-  }
   select{
-   
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   }
