@@ -162,6 +162,7 @@
                             </span>
                         </th>
                         <th>ID</th>
+                        <th>Profile</th>
 						<th>Firstname</th>
 						<th>middlename</th>
 						<th>Lastname</th>
@@ -177,6 +178,8 @@
 						<th>Birthday</th>
 
 						<th>Age</th>
+						<th>Gender</th>
+
 						<th>civil_status</th>
 						<th>citizenship</th>
 						<th>email</th>
@@ -197,9 +200,11 @@
                     </tr>
                 </thead>
                 <tbody>
+
+
                 <?php
 						foreach ($result as $key => $row) {
-							?>
+				?>
                     <tr>
                         <td>
                             <span class="custom-checkbox">
@@ -207,7 +212,8 @@
                                 <label for="checkbox1"></label>
                             </span>
                         </td>
-                        <td><?php echo $row['id']; ?></td>
+                                <td><?php echo $row['id']; ?></td>
+                                <td> <img src="img/<?php echo $row['profile']; ?>" width = 200 title="<?php echo $row['profile']; ?>"> </td>
 								<td><?php echo $row['firstname']; ?></td>
 								<td><?php echo $row['middlename']; ?></td>
 								<td><?php echo $row['lastname']; ?></td>

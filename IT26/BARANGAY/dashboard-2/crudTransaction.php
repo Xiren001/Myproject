@@ -10,6 +10,7 @@ $crud = new Crud();
 
 // Check if form is submitted for adding member
 if(isset($_POST['add'])) {    
+    $profile = $crud->escape_string($_POST['profile']);
     $firstname = $crud->escape_string($_POST['firstname']);
     $middlename = $crud->escape_string($_POST['middlename']);
     $lastname = $crud->escape_string($_POST['lastname']);
@@ -45,8 +46,8 @@ if(isset($_POST['add'])) {
     $emergency_contacts = $crud->escape_string($_POST['emergency_contacts']);
         
     // Insert data to database
-    $sql = "INSERT INTO tbl_residence (firstname, middlename, lastname, address, suffix, job_status, block, street, subd_purok, birthplace, birthday, age, gender, civil_status, citizenship, email, religion, blood_type, voters_id, presinct_no, contact_number, household_id, occupation, disabilities, emergency_contacts) 
-            VALUES ('$firstname','$middlename','$lastname','$address','$suffix', '$job_status', '$block', '$street', '$subd_purok', '$birthplace', '$birthday', '$age', '$gender', '$civil_status', '$citizenship', '$email', '$religion', '$blood_type', '$voters_id', '$presinct_no', '$contact_number', '$household_id', '$occupation', '$disabilities', '$emergency_contacts')";
+    $sql = "INSERT INTO tbl_residence (profile, firstname, middlename, lastname, address, suffix, job_status, block, street, subd_purok, birthplace, birthday, age, gender, civil_status, citizenship, email, religion, blood_type, voters_id, presinct_no, contact_number, household_id, occupation, disabilities, emergency_contacts) 
+            VALUES ('$profile', '$firstname','$middlename','$lastname','$address','$suffix', '$job_status', '$block', '$street', '$subd_purok', '$birthplace', '$birthday', '$age', '$gender', '$civil_status', '$citizenship', '$email', '$religion', '$blood_type', '$voters_id', '$presinct_no', '$contact_number', '$household_id', '$occupation', '$disabilities', '$emergency_contacts')";
 
     if($crud->execute($sql)){
         $_SESSION['message'] = 'Member added successfully';
@@ -57,11 +58,13 @@ if(isset($_POST['add'])) {
     header('location: Cdashboard.php');
 }
 
+
 // Check if form is submitted for editing or deleting member
 if(isset($_POST['edit'])) {
     if(isset($_POST['id'])) {
         // Editing operation
-        $firstname = $crud->escape_string($_POST['firstname']);
+    $profile = $crud->escape_string($_POST['profile']);
+    $firstname = $crud->escape_string($_POST['firstname']);
     $middlename = $crud->escape_string($_POST['middlename']);
     $lastname = $crud->escape_string($_POST['lastname']);
     $address = $crud->escape_string($_POST['address']);
@@ -99,7 +102,7 @@ if(isset($_POST['edit'])) {
         $id = $crud->escape_string($_POST['id']); // Get id from hidden input
         
         // Update data
-        $sql = "UPDATE tbl_residence SET firstname = '$firstname', middlename = '$middlename', lastname = '$lastname', 
+        $sql = "UPDATE tbl_residence SET profile = '$profile', firstname = '$firstname', middlename = '$middlename', lastname = '$lastname', 
         suffix = '$suffix', job_status = '$job_status', block = '$block', street = '$street', subd_purok = '$subd_purok', birthplace = '$birthplace', birthday = '$birthday',
         civil_status = '$civil_status', citizenship = '$citizenship', email = '$email', religion = '$religion', blood_type = '$blood_type', voters_id = '$voters_id',
         presinct_no = '$presinct_no', contact_number = '$contact_number',  household_id = '$household_id',
