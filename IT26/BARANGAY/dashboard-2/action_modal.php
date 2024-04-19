@@ -297,3 +297,215 @@
 	</div>
 </div>
 <!-- /.modal -->
+
+
+<div class="modal fade" id="view<?php echo $row['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialogs container">
+		<div class="modal-content container">
+
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<center>
+					<h4 class="modal-title" id="myModalLabel">Resident Details</h4>
+				</center>
+			</div>
+
+			<div class="modal-body container">
+				<div class="container-fluid">
+
+					<form class="form" method="POST" action="crudTransaction.php?id=<?php echo $row['id']; ?>">
+
+						<div class="con-con">
+							<div class="con-1">
+
+								<div class="row">
+
+									<div class="img-div">
+										<div id="preview" class="img-area col-md-4" data-img="">
+											<i class='bx bxs-cloud-upload icon-UP'></i>
+											<h3>Upload Image</h3>
+										</div>
+										<div class="select-div">
+											<label class="labels">
+												<input type="file" name="profile" value="" class="form-control" id="upload_file" accept="image/*" onchange="getImagePreview(event)">
+												<span class="img-label">Select a file</span>
+											</label>
+										</div>
+									</div>
+
+								</div>
+
+
+								<div class="row">
+
+									<div class="con-modal">
+										<label class="control-label">blood_type:</label>
+										<input type="text" class="form-control" readonly="readonly" name="blood_type" autocomplete="off" value="<?php echo $row['blood_type']; ?>" required>
+									</div>
+
+
+
+									<div class="con-modal">
+										<label class="control-label">religion:</label>
+										<input type="text" class="form-control" readonly="readonly" name="religion" autocomplete="off" value="<?php echo $row['religion']; ?>" required>
+									</div>
+
+
+								</div>
+								<div class="row">
+
+									<div class="con-modal">
+										<label class="control-label">civil_status:</label>
+										<input type="text" class="form-control" readonly="readonly" name="civil_status" autocomplete="off" value="<?php echo $row['civil_status']; ?>" required>
+									</div>
+
+									<div class="con-modal">
+										<label class="control-label">job_status:</label>
+										<input type="text" class="form-control" readonly="readonly" name="job_status" autocomplete="off" value="<?php echo $row['job_status']; ?>" required>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="con-2">
+								<div class="row">
+									<div class="con-modal">
+										<label class="control-label">Firstname:</label>
+										<input type="text" class="form-control" readonly="readonly" name="firstname" autocomplete="off" value="<?php echo $row['firstname']; ?>" required>
+									</div>
+									<div class="con-modal">
+										<label class="control-label">middlename:</label>
+										<input type="text" class="form-control" readonly="readonly" name="middlename" autocomplete="off" value="<?php echo $row['middlename']; ?>" required>
+									</div>
+									<div class="con-modal">
+										<label class="control-label">Lastname:</label>
+										<input type="text" class="form-control" readonly="readonly" name="lastname" autocomplete="off" value="<?php echo $row['lastname']; ?>" required>
+									</div>
+									<div class="con-modal">
+										<label class="control-label">suffix:</label>
+										<input type="text" class="form-control" readonly="readonly" name="suffix" autocomplete="off" value="<?php echo $row['suffix']; ?>" required>
+									</div>
+								</div>
+
+
+								<div class="row">
+
+									<div class="con-modal">
+										<label class="control-label">Address:</label>
+										<input type="text" class="form-control" readonly="readonly" name="address" autocomplete="off" value="<?php echo $row['address']; ?>" required>
+									</div>
+
+									<div class="con-modal">
+										<label class="control-label">street:</label>
+										<input type="text" class="form-control" readonly="readonly" name="street" autocomplete="off" value="<?php echo $row['street']; ?>" required>
+									</div>
+
+									<div class="con-modal">
+										<label class="control-label">birthday:</label>
+										<input type="text" class="form-control" readonly="readonly" name="birthday" autocomplete="off" value="<?php echo $row['birthday']; ?>" required>
+									</div>
+
+									<div class="con-modal">
+										<label class="control-label">subd_purok:</label>
+										<input type="text" class="form-control" readonly="readonly" name="subd_purok" autocomplete="off" value="<?php echo $row['subd_purok']; ?>" required>
+									</div>
+
+									<div class="con-modal">
+										<label class="control-label">block:</label>
+										<input type="text" class="form-control" readonly="readonly" name="block" autocomplete="off" value="<?php echo $row['block']; ?>" required>
+									</div>
+
+								</div>
+
+
+
+								<div class="row">
+
+									<div class="con-modal">
+										<label class="control-label">birthplace:</label>
+										<input type="text" class="form-control" readonly="readonly" name="birthplace" autocomplete="off" value="<?php echo $row['birthplace']; ?>" required>
+									</div>
+
+									<div class="con-modal">
+										<label class="control-label">Age:</label>
+										<input type="text" class="form-control" readonly="readonly" name="age" autocomplete="off" value="<?php echo $row['age']; ?>" required>
+									</div>
+
+									<div class="con-modal">
+										<label class="control-label">Gender:</label>
+										<input type="text" class="form-control" readonly="readonly" name="gender" autocomplete="off" value="<?php echo $row['gender']; ?>" required>
+									</div>
+
+									<div class="con-modal">
+										<label class="control-label">occupation:</label>
+										<input type="text" class="form-control" readonly="readonly" name="occupation" autocomplete="off" value="<?php echo $row['occupation']; ?>" required>
+									</div>
+
+								</div>
+
+
+
+								<div class="row">
+
+									<div class="con-modal">
+										<label class="control-label">voters_id:</label>
+										<input type="text" class="form-control" readonly="readonly" name="voters_id" autocomplete="off" value="<?php echo $row['voters_id']; ?>" required>
+									</div>
+
+									<div class="con-modal">
+										<label class="control-label">citizenship:</label>
+										<input type="text" class="form-control" readonly="readonly" name="citizenship" autocomplete="off" value="<?php echo $row['citizenship']; ?>" required>
+									</div>
+
+									<div class="con-modal">
+										<label class="control-label">presinct_no:</label>
+										<input type="text" class="form-control" readonly="readonly" name="presinct_no" autocomplete="off" value="<?php echo $row['presinct_no']; ?>" required>
+									</div>
+
+									<div class="con-modal">
+										<label class="control-label">emergency_contacts:</label>
+										<input type="text" class="form-control" readonly="readonly" name="emergency_contacts" autocomplete="off" value="<?php echo $row['emergency_contacts']; ?>" required>
+									</div>
+
+								</div>
+
+
+								<div class="row">
+
+									<div class="con-modal">
+										<label class="control-label">disabilities:</label>
+										<input type="text" class="form-control" readonly="readonly" name="disabilities" autocomplete="off" value="<?php echo $row['disabilities']; ?>" required>
+									</div>
+
+									<div class="con-modal">
+										<label class="control-label">household_id:</label>
+										<input type="text" class="form-control" readonly="readonly" name="household_id" autocomplete="off" value="<?php echo $row['household_id']; ?>" required>
+									</div>
+
+
+									<div class="con-modal">
+										<label class="control-label">email:</label>
+										<input type="text" class="form-control" readonly="readonly" name="email" autocomplete="off" value="<?php echo $row['email']; ?>" required>
+									</div>
+
+									<div class="con-modal">
+										<label class="control-label">contact_number:</label>
+										<input type="text" class="form-control" readonly="readonly" name="contact_number" autocomplete="off" value="<?php echo $row['contact_number']; ?>" required>
+									</div>
+								</div>
+								<input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+							</div>
+						</div>
+
+						<div class="modal-footer">
+
+						</div>
+					</form>
+
+
+					<input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

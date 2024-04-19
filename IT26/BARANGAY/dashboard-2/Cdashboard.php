@@ -1,19 +1,20 @@
 <?php
-	//start session
-	session_start();
+//start session
+session_start();
 
-	//crud with database connection
-	include_once('Crud.php');
+//crud with database connection
+include_once('Crud.php');
 
-	$crud = new Crud();
+$crud = new Crud();
 
-	//fetch data
-	$sql = "SELECT * FROM tbl_residence";
-	$result = $crud->read($sql);
+//fetch data
+$sql = "SELECT * FROM tbl_residence";
+$result = $crud->read($sql);
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,6 +29,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+
 <body>
     <div class="container-div">
         <header class="header">
@@ -133,24 +135,23 @@
                         <h2>Community Record</h2>
                     </div>
                     <div class="col-sm-6">
-                    <a href="#add" class="btn btn-add" data-toggle="modal"><i
-                                class="material-icons">&#xE147;</i> <span>Add Resident</span></a>
+                        <a href="#add" class="btn btn-add" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add Resident</span></a>
                     </div>
                 </div>
             </div>
 
             <?php
-				if(isset($_SESSION['message'])){
-					?>
-						<div class="alert alert-info text-center">
-							<?php echo $_SESSION['message']; ?>
-						</div>
-					<?php
+            if (isset($_SESSION['message'])) {
+            ?>
+                <div class="alert alert-info text-center">
+                    <?php echo $_SESSION['message']; ?>
+                </div>
+            <?php
 
-					unset($_SESSION['message']);
-				}
-			
-			?>
+                unset($_SESSION['message']);
+            }
+
+            ?>
 
             <table class="table table-striped table-hover">
                 <thead>
@@ -161,101 +162,44 @@
                                 <label for="selectAll"></label>
                             </span>
                         </th>
-                        <th>ID</th>
-                        <th>Profile</th>
-						<th>Firstname</th>
-						<th>middlename</th>
-						<th>Lastname</th>
-						<th>Address</th>
-
-						<th>Suffix</th>
-						<th>Job Status</th>
-						<th>Block</th>
-						
-						<th>Street</th>
-						<th>Purok</th>
-						<th>Birthplace</th>
-						<th>Birthday</th>
-
-						<th>Age</th>
-						<th>Gender</th>
-
-						<th>civil_status</th>
-						<th>citizenship</th>
-						<th>email</th>
-						<th>religion</th>
-						
-						<th>blood_type</th>
-						<th>voters_id</th>
-						<th>presinct_no</th>
-						<th>contact_number</th>
-						
-						
-						<th>household_id</th>
-						
-						<th>occupation</th>
-						<th>disabilities</th>
-						<th>emergency_contacts</th>
-						<th>Action</th>
+                        <th>Firstname</th>
+                        <th>middlename</th>
+                        <th>Lastname</th>
+                        <th>Purok</th>
+                        <th>presinct_no</th>
+                        <th style="text-align: center; padding-right:25px; ">Action</th>
                     </tr>
                 </thead>
                 <tbody>
 
 
-                <?php
-						foreach ($result as $key => $row) {
-				?>
-                    <tr>
-                        <td>
-                            <span class="custom-checkbox">
-                                <input type="checkbox" id="checkbox1" name="options[]" value="1">
-                                <label for="checkbox1"></label>
-                            </span>
-                        </td>
-                                <td><?php echo $row['id']; ?></td>
-                                <td> <img src="img/<?php echo $row['profile']; ?>" width = 200 title="<?php echo $row['profile']; ?>"> </td>
-								<td><?php echo $row['firstname']; ?></td>
-								<td><?php echo $row['middlename']; ?></td>
-								<td><?php echo $row['lastname']; ?></td>
-								<td><?php echo $row['address']; ?></td>
-								<td><?php echo $row['suffix']; ?></td>
-								<td><?php echo $row['job_status']; ?></td>
-								<td><?php echo $row['block']; ?></td>
-							
-								<td><?php echo $row['street']; ?></td>
-								<td><?php echo $row['subd_purok']; ?></td>
-								<td><?php echo $row['birthplace']; ?></td>
-								<td><?php echo $row['birthday']; ?></td>
+                    <?php
+                    foreach ($result as $key => $row) {
+                    ?>
+                        <tr>
+                            <td>
+                                <span class="custom-checkbox">
+                                    <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                                    <label for="checkbox1"></label>
+                                </span>
+                            </td>
+                            <td><?php echo $row['firstname']; ?></td>
+                            <td><?php echo $row['middlename']; ?></td>
+                            <td><?php echo $row['lastname']; ?></td>
+                            <td><?php echo $row['subd_purok']; ?></td>
+                            <td><?php echo $row['presinct_no']; ?></td>
+                            <td style="padding: 5px; display:flex; flex-direction:row; justify-content:center; align-items:center;">
+                                <a href="#edit<?php echo $row['id']; ?>" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 
-								<td><?php echo $row['age']; ?></td>
-								<td><?php echo $row['gender']; ?></td>
+                                <a href="#delete<?php echo $row['id']; ?>" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 
-								<td><?php echo $row['civil_status']; ?></td>
-								<td><?php echo $row['citizenship']; ?></td>
-								<td><?php echo $row['email']; ?></td>
-								<td><?php echo $row['religion']; ?></td>
-								
-								<td><?php echo $row['blood_type']; ?></td>
-								<td><?php echo $row['voters_id']; ?></td>
-								<td><?php echo $row['presinct_no']; ?></td>
-								<td><?php echo $row['contact_number']; ?></td>
-								
-								<td><?php echo $row['household_id']; ?></td>
-								
-								<td><?php echo $row['occupation']; ?></td>
-								<td><?php echo $row['disabilities']; ?></td>
-								<td><?php echo $row['emergency_contacts']; ?></td>
-                        <td>
-                        <a href="#edit<?php echo $row['id']; ?>" class="edit" data-toggle="modal"><i class="material-icons"
-                                    data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                        <a href="#delete<?php echo $row['id']; ?>" class="delete" data-toggle="modal"><i class="material-icons"
-                                    data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                        </td>
-                        <?php include('action_modal.php'); ?>
-                    </tr>
-                    <?php     
-					    }
-					?>
+                                <a href="#view<?php echo $row['id']; ?>" class="view" data-toggle="modal"><i class='bx bxs-show' data-toggle="tooltip" title="view">&#xE872;</i></a>
+                            </td>
+                            <?php include('action_modal.php'); ?>
+                        </tr>
+                    <?php
+                    }
+                    ?>
                 </tbody>
             </table>
         </div>
