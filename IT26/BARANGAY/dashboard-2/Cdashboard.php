@@ -137,6 +137,12 @@ $result = $crud->read($sql);
                     <div class="col-sm-6">
                         <a href="#add" class="btn btn-add" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add Resident</span></a>
                     </div>
+                    <form action="" method="GET">
+                        <div class="input-group mb-3">
+                            <input type="search" name="search" id="search" autocomplete="off" class="form-control search" placeholder="Search" value="<?php echo isset($_GET['search']) ? $_GET['search'] : ''; ?>">
+                        </div>
+                    </form>
+
                 </div>
             </div>
 
@@ -171,36 +177,80 @@ $result = $crud->read($sql);
                     </tr>
                 </thead>
                 <tbody>
-
-
                     <?php
-                    foreach ($result as $key => $row) {
+                    $con = mysqli_connect("localhost", "root", "", "barangay_profiling");
+
+                    // Check if search query is set and not empty
+                    if (isset($_GET['search']) && !empty($_GET['search'])) {
+                        $filtervalues = $_GET['search'];
+                        $query = "SELECT * FROM tbl_residence WHERE CONCAT(firstname,lastname,middlename,subd_purok,presinct_no) LIKE '%$filtervalues%' ";
+                        $query_run = mysqli_query($con, $query);
+
+                        if (mysqli_num_rows($query_run) > 0) {
+                            foreach ($query_run as $items) {
                     ?>
-                        <tr>
-                            <td>
-                                <span class="custom-checkbox">
-                                    <input type="checkbox" id="checkbox1" name="options[]" value="1">
-                                    <label for="checkbox1"></label>
-                                </span>
-                            </td>
-                            <td><?php echo $row['firstname']; ?></td>
-                            <td><?php echo $row['middlename']; ?></td>
-                            <td><?php echo $row['lastname']; ?></td>
-                            <td><?php echo $row['subd_purok']; ?></td>
-                            <td><?php echo $row['presinct_no']; ?></td>
-                            <td style="padding: 5px; display:flex; flex-direction:row; justify-content:center; align-items:center;">
-                                <a href="#edit<?php echo $row['id']; ?>" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                <tr>
+                                    <td>
+                                        <span class="custom-checkbox">
+                                            <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                                            <label for="checkbox1"></label>
+                                        </span>
+                                    </td>
+                                    <td><?= $items['firstname']; ?></td>
+                                    <td><?= $items['middlename']; ?></td>
+                                    <td><?= $items['lastname']; ?></td>
+                                    <td><?= $items['subd_purok']; ?></td>
+                                    <td><?= $items['presinct_no']; ?></td>
+                                    <td style="padding: 5px; display:flex; flex-direction:row; justify-content:center; align-items:center;">
+                                        <a href="#edit<?= $row['id']; ?>" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 
-                                <a href="#delete<?php echo $row['id']; ?>" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                        <a href="#delete<?= $row['id']; ?>" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 
-                                <a href="#view<?php echo $row['id']; ?>" class="view" data-toggle="modal"><i class='bx bxs-show' data-toggle="tooltip" title="view">&#xE872;</i></a>
-                            </td>
-                            <?php include('action_modal.php'); ?>
-                        </tr>
+                                        <a href="#view<?= $row['id']; ?>" class="view" data-toggle="modal"><i class='bx bxs-show' data-toggle="tooltip" title="view">&#xE872;</i></a>
+                                    </td>
+                                    <?php include('action_modal.php'); ?>
+                                </tr>
+                            <?php
+                            }
+                        } else {
+                            ?>
+                            <tr>
+                                <td colspan="4">No Record Found</td>
+                            </tr>
+                        <?php
+                        }
+                    } else {
+                        // If search query is empty, display all data from $result array
+                        foreach ($result as $row) {
+                        ?>
+                            <tr>
+                                <td>
+                                    <span class="custom-checkbox">
+                                        <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                                        <label for="checkbox1"></label>
+                                    </span>
+                                </td>
+                                <td><?= $row['firstname']; ?></td>
+                                <td><?= $row['middlename']; ?></td>
+                                <td><?= $row['lastname']; ?></td>
+                                <td><?= $row['subd_purok']; ?></td>
+                                <td><?= $row['presinct_no']; ?></td>
+                                <td style="padding: 5px; display:flex; flex-direction:row; justify-content:center; align-items:center;">
+                                    <a href="#edit<?= $row['id']; ?>" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+
+                                    <a href="#delete<?= $row['id']; ?>" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+
+                                    <a href="#view<?= $row['id']; ?>" class="view" data-toggle="modal"><i class='bx bxs-show' data-toggle="tooltip" title="view">&#xE872;</i></a>
+                                </td>
+                                <?php include('action_modal.php'); ?>
+                            </tr>
                     <?php
+                        }
                     }
                     ?>
                 </tbody>
+
+
             </table>
         </div>
     </div>
