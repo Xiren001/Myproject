@@ -38,6 +38,7 @@
 								<div class="con-modal">
 									<label class="control-label">blood_type:</label>
 									<select class="form-select" aria-label="Default select example" name="blood_type">
+									<option value="" disabled selected>Select</option>
 										<option value="A+">A+</option>
 										<option value="A-">A-</option>
 										<option value="B+">B+</option>
@@ -52,6 +53,7 @@
 								<div class="con-modal">
 									<label class="control-label">religion:</label>
 									<select class="form-select" aria-label="Default select example" name="religion">
+									<option value="" disabled selected>Select</option>
 										<option value="roman-catholic">Roman Catholic</option>
 										<option value="islam">Islam</option>
 										<option value="evangelical">Evangelical</option>
@@ -72,6 +74,7 @@
 								<div class="con-modal">
 									<label class="control-label">civil_status:</label>
 									<select class="form-select" aria-label="Default select example" name="civil_status">
+									<option value="" disabled selected>Select</option>
 										<option value="single">Single</option>
 										<option value="married">Married</option>
 										<option value="divorced">Divorced</option>
@@ -82,6 +85,7 @@
 								<div class="con-modal">
 									<label class="control-label">job_status:</label>
 									<select class="form-select" aria-label="Default select example" name="job_status">
+									<option value="" disabled selected>Select</option>
 										<option value="employed">Employed</option>
 										<option value="unemployed">Unemployed</option>
 										<option value="self-employed">Self-Employed</option>
@@ -112,6 +116,7 @@
 								<div class="con-modal">
 									<label class="control-label">suffix:</label>
 									<select class="form-select" aria-label="Default select example" name="suffix">
+									<option value="" disabled selected></option>
 										<option value="Jr.">Jr.</option>
 										<option value="Sr.">Sr.</option>
 										<option value="lll">lll</option>
@@ -142,6 +147,7 @@
 								<div class="con-modal">
 									<label class="control-label">subd_purok:</label>
 									<select class="form-select" aria-label="Default select example" name="subd_purok">
+									<option value="" disabled selected>Select</option>
 										<option value="purok-1">Purok 1</option>
 										<option value="purok-2">Purok 2</option>
 										<option value="purok-3">Purok 3</option>
@@ -158,6 +164,7 @@
 								<div class="con-modal">
 									<label class="control-label">block:</label>
 									<select class="form-select" aria-label="Default select example" name="block">
+									<option value="" disabled selected>Select</option>
 										<option value="block-1">Block 1</option>
 										<option value="block-2">Block 2</option>
 										<option value="block-3">Block 3</option>
@@ -190,6 +197,7 @@
 								<div class="con-modal">
 									<label class="control-label">Gender:</label>
 									<select class="form-select" aria-label="Default select example" name="gender">
+									<option value="" disabled selected>Select</option>
 										<option value="male">Male</option>
 										<option value="female">Female</option>
 									</select>

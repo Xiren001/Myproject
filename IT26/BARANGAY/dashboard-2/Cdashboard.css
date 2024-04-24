@@ -432,7 +432,6 @@ table.table .avatar {
 .img-area img {
     z-index: 1;
     height: 100%;
-
     object-position: center;
 }
 

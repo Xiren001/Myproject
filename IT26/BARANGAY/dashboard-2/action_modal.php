@@ -16,6 +16,7 @@
 
 						<div class="con-con">
 							<div class="con-1">
+								
 								<div class="row">
 									<div class="img-div">
 										<div id="preview" class="img-area col-md-4" data-img="">
