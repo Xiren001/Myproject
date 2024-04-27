@@ -8,7 +8,7 @@ include_once('Crud.php');
 $crud = new Crud();
 
 //fetch data
-$sql = "SELECT * FROM tbl_residence";
+$sql = "SELECT * FROM brngy_personel";
 $result = $crud->read($sql);
 ?>
 
@@ -63,14 +63,14 @@ $result = $crud->read($sql);
                     <div class="men-p">
                         <p>MENU</p>
                     </div>
-                    <li class="list-item">
-                        <a href="#">
+                    <li class="list-item active">
+                        <a href="/IT26/BARANGAY/dashboard-residence/CdashboardPersonel.php">
                             <i class='bx bx-user'></i>
                             <span class="link-name">Personel</span>
                         </a>
                     </li>
-                    <li class="list-item active">
-                        <a href="/IT26/BARANGAY/dashboard-2/Cdashboard.html">
+                    <li class="list-item">
+                        <a href="/IT26/BARANGAY/dashboard-residence/Cdashboard.php">
                             <i class='bx bx-message-square-dots'></i>
                             <span class="link-name">Community Record</span>
                         </a>
@@ -132,10 +132,10 @@ $result = $crud->read($sql);
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h2>Community Record</h2>
+                        <h2>Personel Record</h2>
                     </div>
                     <div class="col-sm-6">
-                        <a href="#add" class="btn btn-add" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add Resident</span></a>
+                        <a href="#addPersonel" class="btn btn-add" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add Personel</span></a>
                     </div>
                     <form action="" method="GET">
                         <div class="input-group mb-3">
@@ -168,11 +168,12 @@ $result = $crud->read($sql);
                                 <label for="selectAll"></label>
                             </span>
                         </th>
-                        <th>Firstname</th>
-                        <th>middlename</th>
-                        <th>Lastname</th>
-                        <th>Purok</th>
-                        <th>presinct_no</th>
+                        <th>Fullname</th>
+                        <th>Position</th>
+                        <th>Department</th>
+                        <th>Term Start</th>
+                        <th>Term End</th>
+                        <th>Status</th>
                         <th style="text-align: center; padding-right:25px; ">Action</th>
                     </tr>
                 </thead>
@@ -183,7 +184,7 @@ $result = $crud->read($sql);
                     // Check if search query is set and not empty
                     if (isset($_GET['search']) && !empty($_GET['search'])) {
                         $filtervalues = $_GET['search'];
-                        $query = "SELECT * FROM tbl_residence WHERE CONCAT(firstname,lastname,middlename,subd_purok,presinct_no) LIKE '%$filtervalues%' ";
+                        $query = "SELECT * FROM brngy_personel WHERE CONCAT(fullname,position,department,termstart,termend,status) LIKE '%$filtervalues%' ";
                         $query_run = mysqli_query($con, $query);
 
                         if (mysqli_num_rows($query_run) > 0) {
@@ -196,11 +197,12 @@ $result = $crud->read($sql);
                                             <label for="checkbox1"></label>
                                         </span>
                                     </td>
-                                    <td><?= $items['firstname']; ?></td>
-                                    <td><?= $items['middlename']; ?></td>
-                                    <td><?= $items['lastname']; ?></td>
-                                    <td><?= $items['subd_purok']; ?></td>
-                                    <td><?= $items['presinct_no']; ?></td>
+                                    <td><?= $items['fullname']; ?></td>
+                                    <td><?= $items['position']; ?></td>
+                                    <td><?= $items['department']; ?></td>
+                                    <td><?= $items['termstart']; ?></td>
+                                    <td><?= $items['termend']; ?></td>
+                                    <td><?= $items['status']; ?></td>
                                     <td style="padding: 5px; display:flex; flex-direction:row; justify-content:center; align-items:center;">
                                         <a href="#edit<?= $row['id']; ?>" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 
@@ -230,11 +232,12 @@ $result = $crud->read($sql);
                                         <label for="checkbox1"></label>
                                     </span>
                                 </td>
-                                <td><?= $row['firstname']; ?></td>
-                                <td><?= $row['middlename']; ?></td>
-                                <td><?= $row['lastname']; ?></td>
-                                <td><?= $row['subd_purok']; ?></td>
-                                <td><?= $row['presinct_no']; ?></td>
+                                    <td><?= $row['fullname']; ?></td>
+                                    <td><?= $row['position']; ?></td>
+                                    <td><?= $row['department']; ?></td>
+                                    <td><?= $row['termstart']; ?></td>
+                                    <td><?= $row['termend']; ?></td>
+                                    <td><?= $row['status']; ?></td>
                                 <td style="padding: 5px; display:flex; flex-direction:row; justify-content:center; align-items:center;">
                                     <a href="#edit<?= $row['id']; ?>" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 
@@ -255,7 +258,7 @@ $result = $crud->read($sql);
         </div>
     </div>
     <?php include('add_modal.php'); ?>
-    <script src="Cdashboard.js"></script>
+    <script src="CdashboardPersonel.js"></script>
 </body>
 
 </html>
