@@ -204,7 +204,7 @@ $result = $crud->read($sql);
                                     <td><?= $items['termend']; ?></td>
                                     <td><?= $items['status']; ?></td>
                                     <td style="padding: 5px; display:flex; flex-direction:row; justify-content:center; align-items:center;">
-                                        <a href="#edit<?= $row['id']; ?>" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                        <a href="#editPersonel<?= $row['id']; ?>" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 
                                         <a href="#delete<?= $row['id']; ?>" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 
@@ -239,9 +239,9 @@ $result = $crud->read($sql);
                                     <td><?= $row['termend']; ?></td>
                                     <td><?= $row['status']; ?></td>
                                 <td style="padding: 5px; display:flex; flex-direction:row; justify-content:center; align-items:center;">
-                                    <a href="#edit<?= $row['id']; ?>" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                    <a href="#editPersonel<?= $row['id']; ?>" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 
-                                    <a href="#delete<?= $row['id']; ?>" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                    <a href="#deletePersonel<?= $row['id']; ?>" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 
                                     <a href="#view<?= $row['id']; ?>" class="view" data-toggle="modal"><i class='bx bxs-show' data-toggle="tooltip" title="view">&#xE872;</i></a>
                                 </td>

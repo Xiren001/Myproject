@@ -274,6 +274,130 @@
 <!-- /.modal -->
 
 
+
+
+
+<!-- Edit -->
+<div class="modal fade" id="editPersonel<?php echo $row['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialogs container">
+		<div class="modal-content container">
+
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<center>
+					<h4 class="modal-title" id="myModalLabel">Edit Personel</h4>
+				</center>
+			</div>
+
+			<div class="modal-body container">
+				<div class="container-fluid">
+					<form class="form" method="POST" action="crudTransaction.php?id=<?php echo $row['id']; ?>">
+
+						<div class="con-con">
+							<div class="con-1">
+								
+								<div class="row">
+									<div class="img-div">
+										<div id="preview" class="img-area col-md-4" data-img="">
+											<i class='bx bxs-cloud-upload icon-UP'></i>
+											<h3>Upload Image</h3>
+										</div>
+										<div class="select-div">
+											<label class="labels">
+												<input type="file" name="profile" value="" class="form-control" id="upload_file" accept="image/*" onchange="getImagePreview(event)">
+												<span class="img-label">Select a file</span>
+											</label>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="row">
+
+									<div class="con-modal">
+										<label class="control-label">Fullname:</label>
+										<input type="text" class="form-control" name="fullname" autocomplete="off" value="<?php echo $row['fullname']; ?>" required>
+									</div>
+
+									<div class="con-modal">
+										<label class="control-label">position:</label>
+										<select class="form-select" aria-label="Default select example" name="position" value="<?php echo $row['position']; ?>">
+											<option value="A+">A+</option>
+											<option value="A-">A-</option>
+											<option value="B+">B+</option>
+											<option value="B-">B-</option>
+											<option value="AB-">AB+</option>
+											<option value="AB-">AB-</option>
+											<option value="O+">O+</option>
+											<option value="O-">O-</option>
+										</select>
+									</div>
+
+									<div class="con-modal">
+										<label class="control-label">department:</label>
+										<select class="form-select" aria-label="Default select example" name="department" value="<?php echo $row['department']; ?>">
+											<option value="roman-catholic">Roman Catholic</option>
+											<option value="islam">Islam</option>
+											<option value="evangelical">Evangelical</option>
+											<option value="iglesia-ni-cristo">Iglesia ni Cristo</option>
+											<option value="ang-dating-daan">Ang Dating Daan</option>
+											<option value="buddhism">Buddhism</option>
+											<option value="hinduism">Hinduism</option>
+											<option value="judaism">Judaism</option>
+											<option value="atheism">Atheism</option>
+											<option value="other">Other</option>
+										</select>
+									</div>
+
+
+								</div>
+								
+							</div>
+
+							<div class="con-2">
+								<div class="row">
+									
+									<div class="con-modal">
+										<label class="control-label">term start:</label>
+										<input type="text" class="form-control" name="termstart" autocomplete="off" value="<?php echo $row['termstart']; ?>" required>
+									</div>
+									<div class="con-modal">
+										<label class="control-label">term end:</label>
+										<input type="text" class="form-control" name="termend" autocomplete="off" value="<?php echo $row['termend']; ?>" required>
+									</div>
+
+									<div class="con-modal">
+										<label class="control-label">status:</label>
+										<input type="text" class="form-control" name="status" autocomplete="off" value="<?php echo $row['status']; ?>" required>
+									</div>
+
+									
+								</div>
+
+
+								<input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+							</div>
+						</div>
+
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+							<button type="submit" name="editPersonel" class="btn btn-warning">Save</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /.modal -->
+
+
+
+
+
+
+
+
 <!-- Delete -->
 <div class="modal fade" id="delete<?php echo $row['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog container">
@@ -298,6 +422,39 @@
 	</div>
 </div>
 <!-- /.modal -->
+
+
+
+<!-- Delete -->
+<div class="modal fade" id="deletePersonel<?php echo $row['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog container">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<center>
+					<h4 class="modal-title" id="myModalLabel">Delete Member</h4>
+				</center>
+			</div>
+			<div class="modal-body">
+				<div class="container-fluid text-center">
+					<h5>Are sure you want to delete</h5>
+					<h2>Name: <b><?php echo $row['fullname'] . ' ' . $row['position']; ?></b></h2>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				<a href="crudTransaction.php?deletePersonel&id=<?php echo $row['id']; ?>" class="btn btn-danger">Yes</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /.modal -->
+
+
+
+
+
+
 
 
 <div class="modal fade" id="view<?php echo $row['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

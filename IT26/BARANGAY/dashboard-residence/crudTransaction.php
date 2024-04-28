@@ -164,6 +164,43 @@ if(isset($_POST['edit'])) {
     }
 }
 
+
+
+// Check if form is submitted for editing or deleting member
+if(isset($_POST['editPersonel'])) {
+    if(isset($_POST['id'])) {
+        // Editing operation
+        $fullname = $crud->escape_string($_POST['fullname']);
+        $position = $crud->escape_string($_POST['position']);
+        $department = $crud->escape_string($_POST['department']);
+        $termstart = $crud->escape_string($_POST['termstart']);
+        $termend = $crud->escape_string($_POST['termend']);
+        $status = $crud->escape_string($_POST['status']);
+       
+
+    $id = $crud->escape_string($_POST['id']); // Get id from hidden input
+        
+        // Update data
+        $sql = "UPDATE brngy_personel SET fullname = '$fullname', position = '$position', department = '$department', termstart = '$termstart', 
+        termend = '$termend', status = '$status' WHERE id = '$id'";
+
+        if($crud->execute($sql)){
+            $_SESSION['message'] = 'Personel updated successfully';
+        } else{
+            $_SESSION['message'] = 'Cannot update Personel';
+        }
+        
+        header('location:  CdashboardPersonel.php');
+    }
+}
+
+
+
+
+
+
+
+
 // Check if delete action is requested
 if(isset($_GET['delete']) && isset($_GET['id'])){
     // Getting the id
@@ -180,5 +217,24 @@ if(isset($_GET['delete']) && isset($_GET['id'])){
         
     header('location:  Cdashboard.php');
 }
+
+// Check if delete action is requested
+if(isset($_GET['deletePersonel']) && isset($_GET['id'])){
+    // Getting the id
+    $id = $_GET['id'];
+     
+    // Delete data
+    $sql = "DELETE FROM brngy_personel WHERE id = '$id'";
+
+    if($crud->execute($sql)){
+        $_SESSION['message'] = 'Personel deleted successfully';
+    } else{
+        $_SESSION['message'] = 'Cannot delete Personel';
+    }
+        
+    header('location:  CdashboardPersonel.php');
+}
+
+
 ?>
 
