@@ -212,7 +212,7 @@ if(isset($_GET['delete']) && isset($_GET['id'])){
     if($crud->execute($sql)){
         $_SESSION['message'] = 'Member deleted successfully';
     } else{
-        $_SESSION['message'] = 'Cannot delete member';
+        $_SESSION['message'] = 'Cannot delete member'; 
     }
         
     header('location:  Cdashboard.php');
