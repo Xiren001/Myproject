@@ -248,7 +248,7 @@ $result = $crud->read($sql);
                                 <?php include('action_modal.php'); ?>
                             </tr>
                     <?php
-                        }
+                        } 
                     }
                     ?>
                 </tbody>
