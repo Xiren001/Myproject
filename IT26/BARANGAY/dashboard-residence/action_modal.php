@@ -655,3 +655,90 @@
 		</div>
 	</div>
 </div>
+
+
+
+
+
+
+<div class="modal fade" id="viewPersonel<?php echo $row['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialogs container">
+		<div class="modal-content container">
+
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<center>
+					<h4 class="modal-title" id="myModalLabel">Personel Details</h4>
+				</center>
+			</div>
+
+			<div class="modal-body container" style="padding: 0 !important;">
+				<div class="container-fluid">
+
+					<form class="form" method="POST" action="crudTransaction.php?id=<?php echo $row['id']; ?>">
+
+						<div class="con-con" style="display:flex; flex-direction:column; justify-content:center; align-items:center;">
+							<div class="con-1" style="display:flex; flex-direction:row; width:100%; justify-content:center; align-items:center;">
+
+								<div class="row" style="gap: 4rem;">
+
+									<div class="img-div">
+										<div id="preview" class="img-area col-md-4" data-img="">
+											<i class='bx bxs-cloud-upload icon-UP'></i>
+											<h3>Upload Image</h3>
+										</div>
+									</div>
+
+								</div>
+							<div class="column">
+								<div class="row" style="gap: 5rem;">
+									<div class="con-modal">
+										<label class="control-label">Fullname:</label>
+										<input style="background-color:transparent; border:none; padding:0; box-shadow:none; font-weight:bold; color:black;" type="text" class="form-control" readonly="readonly" name="fullname" autocomplete="off" value="<?php echo $row['fullname']; ?>" required>
+									</div>
+									<div class="con-modal">
+										<label class="control-label">Position:</label>
+										<input style="background-color:transparent; border:none; padding:0; box-shadow:none; font-weight:bold; color:black;" type="text" type="text" class="form-control" readonly="readonly" name="position" autocomplete="off" value="<?php echo $row['position']; ?>" required>
+									</div>
+									<div class="con-modal">
+										<label class="control-label">Department:</label>
+										<input style="background-color:transparent; border:none; padding:0; box-shadow:none; font-weight:bold; color:black;" type="text" type="text" class="form-control" readonly="readonly" name="department" autocomplete="off" value="<?php echo $row['department']; ?>" required>
+									</div>
+								</div>
+								<div class="row" style="gap: 5rem;">
+									<div class="con-modal">
+										<label class="control-label">Term Start:</label>
+										<input style="background-color:transparent; border:none; padding:0; box-shadow:none; font-weight:bold; color:black;" type="text"  class="form-control" readonly="readonly" name="termstart" autocomplete="off" value="<?php echo $row['termstart']; ?>" required>
+									</div>
+									<div class="con-modal">
+										<label class="control-label">Term End:</label>
+										<input style="background-color:transparent; border:none; padding:0; box-shadow:none; font-weight:bold; color:black;" type="text" type="text" class="form-control" readonly="readonly" name="termend" autocomplete="off" value="<?php echo $row['termend']; ?>" required>
+									</div>
+									<div class="con-modal">
+										<label class="control-label">Status:</label>
+										<input style="background-color:transparent; border:none; padding:0; box-shadow:none; font-weight:bold; color:black;" type="text" type="text" class="form-control" readonly="readonly" name="status" autocomplete="off" value="<?php echo $row['status']; ?>" required>
+									</div>
+								</div>
+								
+							</div>
+								
+							</div>
+
+							
+
+								<input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+							</div>
+						</div>
+
+						<div class="modal-footer">
+
+						</div>
+					</form>
+
+
+					<input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

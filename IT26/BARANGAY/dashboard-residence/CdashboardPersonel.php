@@ -208,7 +208,7 @@ $result = $crud->read($sql);
 
                                         <a href="#delete<?= $row['id']; ?>" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 
-                                        <a href="#view<?= $row['id']; ?>" class="view" data-toggle="modal"><i class='bx bxs-show' data-toggle="tooltip" title="view">&#xE872;</i></a>
+                                        <a href="#viewPersonel<?= $row['id']; ?>" class="view" data-toggle="modal"><i class='bx bxs-show' data-toggle="tooltip" title="view">&#xE872;</i></a>
                                     </td>
                                     <?php include('action_modal.php'); ?>
                                 </tr>
@@ -243,7 +243,7 @@ $result = $crud->read($sql);
 
                                     <a href="#deletePersonel<?= $row['id']; ?>" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 
-                                    <a href="#view<?= $row['id']; ?>" class="view" data-toggle="modal"><i class='bx bxs-show' data-toggle="tooltip" title="view">&#xE872;</i></a>
+                                    <a href="#viewPersonel<?= $row['id']; ?>" class="view" data-toggle="modal"><i class='bx bxs-show' data-toggle="tooltip" title="view">&#xE872;</i></a>
                                 </td>
                                 <?php include('action_modal.php'); ?>
                             </tr>

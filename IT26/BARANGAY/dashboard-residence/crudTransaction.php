@@ -90,20 +90,6 @@ if(isset($_POST['addPersonel'])) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Check if form is submitted for editing or deleting member
 if(isset($_POST['edit'])) {
     if(isset($_POST['id'])) {
