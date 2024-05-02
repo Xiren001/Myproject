@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE htmml>
 <html lang="en">
 
 <head>
@@ -134,4 +134,4 @@
     <script src="index.js"></script>
 </body>
 
-</html>
+</php>

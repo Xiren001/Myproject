@@ -24,7 +24,7 @@
       <i class="bx bx-right-arrow-circle" id="close-icon"></i>
     </label>
     <nav class="nav">
-      <a href="/IT26/BARANGAY/landing_page/barangay.html" style="--i: 0">Home</a>
+      <a href="/IT26/BARANGAY/landing_page/barangay.php" style="--i: 0">Home</a>
     </nav>
   </header>
 
@@ -162,19 +162,19 @@
         <div class="footer-col">
           <h4>Page</h4>
           <ul class="footer-ul">
-            <li><a href="/IT26/BARANGAY/landing_page/barangay.html">about us</a></li>
-            <li><a href="/IT26/BARANGAY/landing_page/barangay.html">our services</a></li>
-            <li><a href="/IT26/BARANGAY/landing_page/barangay.html">map</a></li>
-            <li><a href="/IT26/BARANGAY/landing_page/barangay.html">mission</a></li>
+            <li><a href="/IT26/BARANGAY/landing_page/barangay.php">about us</a></li>
+            <li><a href="/IT26/BARANGAY/landing_page/barangay.php">our services</a></li>
+            <li><a href="/IT26/BARANGAY/landing_page/barangay.php">map</a></li>
+            <li><a href="/IT26/BARANGAY/landing_page/barangay.php">mission</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>get help</h4>
           <ul class="footer-ul">
-            <li><a href="/IT26/BARANGAY/faq/faq.html">FAQ</a></li>
-          <li><a href="/IT26/BARANGAY/termsCond/terms.html">Terms & Conditions</a></li>
+            <li><a href="/IT26/BARANGAY/faq/faq.php">FAQ</a></li>
+          <li><a href="/IT26/BARANGAY/termsCond/terms.php">Terms & Conditions</a></li>
           <li><a href="#dis">Disclaimer</a></li>
-          <li><a href="/IT26/BARANGAY/privacy/privacy.html">privacy policy</a></li>
+          <li><a href="/IT26/BARANGAY/privacy/privacy.php">privacy policy</a></li>
           </ul>
         </div>
 

@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="bussiness.css" />
+  <link rel="stylesheet" type="text/css" href="indigency.css" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/307a1a6a59.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
@@ -23,7 +23,7 @@
       <i class="bx bx-right-arrow-circle" id="close-icon"></i>
     </label>
     <nav class="nav">
-      <a href="/IT26/BARANGAY/landing_page/barangay.html" style="--i: 0">Home</a>
+      <a href="/IT26/BARANGAY/landing_page/barangay.php" style="--i: 0">Home</a>
     </nav>
   </header>
 
@@ -36,7 +36,7 @@
         <img class="logo img-responsive" src="LOGO.png" alt="logo" />
       </div>
       <div class="p-1 h1-div">
-        <h1> Barangay Business Permit </h1>
+        <h1>Certificate of Indigency </h1>
       </div>
     </div>
 
@@ -59,7 +59,7 @@
   <div class="back">
     <div class="container req">
       <div class="req-div">
-        <p><b>Note:</b> Please make sure to provide accurate information in the form below. Processing of Barangay Business Permit may take up to 1-2hrs. Make sure to upload the needed files and follow the instructions carefully. For Gcash payments, please provide the reference number in the designated field. Thank you.</p>
+        <p><b>Note:</b> Please make sure to provide accurate information in the form below. Processing of Barangay clearance may take up to 1-2hrs. Make sure to upload valid IDs and follow the instructions carefully. For Gcash payments, please provide the reference number in the designated field. Thank you.</p>
       </div>
     </div>
 
@@ -102,7 +102,7 @@
             <fieldset class="f4">
               <div>
                 <div>
-              <label for="upload_file">Upload Community Tax Certificate (Cedula)</label>
+              <label for="upload_file">Upload valid ID</label>
               <input type="file" name="upload_file" class="form-control"  id="upload_file" accept="image/*" onchange="getImagePreview(event)">
                 </div>
                 <div id="preview" class="img-area col-md-4" data-img="">
@@ -113,7 +113,7 @@
                </div>
               <div>
                 <div>
-              <label for="upload_file_sig">Upload DTI Business Name Registration</label>
+              <label for="upload_file_sig">Upload Proof of Income</label>
               <input type="file" name="upload_file_sig" class="form-control"  id="upload_file_sig" accept="image/*" onchange="getImagePreview1(event)">
                 </div>
                 <div id="preview1" class="img-area col-md-4" data-img="">
@@ -167,19 +167,19 @@
         <div class="footer-col">
           <h4>Page</h4>
           <ul class="footer-ul">
-            <li><a href="/IT26/BARANGAY/landing_page/barangay.html">about us</a></li>
-            <li><a href="/IT26/BARANGAY/landing_page/barangay.html">our services</a></li>
-            <li><a href="/IT26/BARANGAY/landing_page/barangay.html">map</a></li>
-            <li><a href="/IT26/BARANGAY/landing_page/barangay.html">mission</a></li>
+            <li><a href="/IT26/BARANGAY/landing_page/barangay.php">about us</a></li>
+            <li><a href="/IT26/BARANGAY/landing_page/barangay.php">our services</a></li>
+            <li><a href="/IT26/BARANGAY/landing_page/barangay.php">map</a></li>
+            <li><a href="/IT26/BARANGAY/landing_page/barangay.php">mission</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>get help</h4>
           <ul class="footer-ul">
-            <li><a href="/IT26/BARANGAY/faq/faq.html">FAQ</a></li>
-          <li><a href="/IT26/BARANGAY/termsCond/terms.html">Terms & Conditions</a></li>
-          <li><a href="/IT26/BARANGAY/disclaimer/disclaimer.html">Disclaimer</a></li>
-          <li><a href="/IT26/BARANGAY/privacy/privacy.html">privacy policy</a></li>
+            <li><a href="/IT26/BARANGAY/faq/faq.php">FAQ</a></li>
+          <li><a href="/IT26/BARANGAY/termsCond/terms.php">Terms & Conditions</a></li>
+          <li><a href="/IT26/BARANGAY/disclaimer/disclaimer.php">Disclaimer</a></li>
+          <li><a href="/IT26/BARANGAY/privacy/privacy.php">privacy policy</a></li>
           </ul>
         </div>
 
@@ -195,7 +195,7 @@
     </div>
   </footer>
 
-  <script src="bussiness.js"></script>
+  <script src="indegency.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="https://smtpjs.com/v3/smtp.js"></script>

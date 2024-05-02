@@ -46,3 +46,10 @@ function getImagePreview1(event)
   newimg.src=image;
   imagediv.appendChild(newimg);
 }
+
+
+
+
+
+
+  

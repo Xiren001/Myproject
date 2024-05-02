@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="ID.css" />
+  <link rel="stylesheet" type="text/css" href="residence.css" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/307a1a6a59.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
@@ -23,7 +23,7 @@
       <i class="bx bx-right-arrow-circle" id="close-icon"></i>
     </label>
     <nav class="nav">
-      <a href="/IT26/BARANGAY/landing_page/barangay.html" style="--i: 0">Home</a>
+      <a href="/IT26/BARANGAY/landing_page/barangay.php" style="--i: 0">Home</a>
     </nav>
   </header>
 
@@ -36,7 +36,7 @@
         <img class="logo img-responsive" src="LOGO.png" alt="logo" />
       </div>
       <div class="p-1 h1-div">
-        <h1> Barangay ID </h1>
+        <h1>Certificate Of Residency</h1>
       </div>
     </div>
 
@@ -113,7 +113,7 @@
                </div>
               <div>
                 <div>
-              <label for="upload_file_sig">Upload Barangay Certificate</label>
+              <label for="upload_file_sig">Upload Proof of Address (electricity bill etc.)</label>
               <input type="file" name="upload_file_sig" class="form-control"  id="upload_file_sig" accept="image/*" onchange="getImagePreview1(event)">
                 </div>
                 <div id="preview1" class="img-area col-md-4" data-img="">
@@ -167,19 +167,19 @@
         <div class="footer-col">
           <h4>Page</h4>
           <ul class="footer-ul">
-            <li><a href="/IT26/BARANGAY/landing_page/barangay.html">about us</a></li>
-            <li><a href="/IT26/BARANGAY/landing_page/barangay.html">our services</a></li>
-            <li><a href="/IT26/BARANGAY/landing_page/barangay.html">map</a></li>
-            <li><a href="/IT26/BARANGAY/landing_page/barangay.html">mission</a></li>
+            <li><a href="/IT26/BARANGAY/landing_page/barangay.php">about us</a></li>
+            <li><a href="/IT26/BARANGAY/landing_page/barangay.php">our services</a></li>
+            <li><a href="/IT26/BARANGAY/landing_page/barangay.php">map</a></li>
+            <li><a href="/IT26/BARANGAY/landing_page/barangay.php">mission</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>get help</h4>
           <ul class="footer-ul">
-            <li><a href="/IT26/BARANGAY/faq/faq.html">FAQ</a></li>
-          <li><a href="/IT26/BARANGAY/termsCond/terms.html">Terms & Conditions</a></li>
-          <li><a href="/IT26/BARANGAY/disclaimer/disclaimer.html">Disclaimer</a></li>
-          <li><a href="/IT26/BARANGAY/privacy/privacy.html">privacy policy</a></li>
+            <li><a href="/IT26/BARANGAY/faq/faq.php">FAQ</a></li>
+          <li><a href="/IT26/BARANGAY/termsCond/terms.php">Terms & Conditions</a></li>
+          <li><a href="/IT26/BARANGAY/disclaimer/disclaimer.php">Disclaimer</a></li>
+          <li><a href="/IT26/BARANGAY/privacy/privacy.php">privacy policy</a></li>
           </ul>
         </div>
 
@@ -195,10 +195,40 @@
     </div>
   </footer>
 
-  <script src="ID.js"></script>
+  <script src="residence.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    // Function to generate a random alphanumeric string of a specified length
+    function generateRandomString(length) {
+      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      let result = '';
+      for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * characters.length);
+        result += characters[randomIndex];
+      }
+      return result;
+    }
+
+    // Function to generate a tracking code in the specified format
+    function generateTrackingCode() {
+      const parts = [];
+      for (let i = 0; i < 8; i++) {
+        parts.push(generateRandomString(4)); // Generate a group of 4 alphanumeric characters
+      }
+      return parts.join('-'); // Join the parts with dashes to form the tracking code
+    }
+
+    // Get the input field for tracking code
+    const trackingInput = document.getElementById('tracking');
+
+    // Generate a tracking code when the document is ready
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set the generated tracking code to the input field
+      trackingInput.value = generateTrackingCode();
+    });
+  </script>
 </body>
 
-</html>
+</php>
