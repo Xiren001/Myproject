@@ -199,6 +199,36 @@
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    // Function to generate a random alphanumeric string of a specified length
+    function generateRandomString(length) {
+      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      let result = '';
+      for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * characters.length);
+        result += characters[randomIndex];
+      }
+      return result;
+    }
+
+    // Function to generate a tracking code in the specified format
+    function generateTrackingCode() {
+      const parts = [];
+      for (let i = 0; i < 8; i++) {
+        parts.push(generateRandomString(4)); // Generate a group of 4 alphanumeric characters
+      }
+      return parts.join('-'); // Join the parts with dashes to form the tracking code
+    }
+
+    // Get the input field for tracking code
+    const trackingInput = document.getElementById('tracking');
+
+    // Generate a tracking code when the document is ready
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set the generated tracking code to the input field
+      trackingInput.value = generateTrackingCode();
+    });
+  </script>
 </body>
 
 </httml>
