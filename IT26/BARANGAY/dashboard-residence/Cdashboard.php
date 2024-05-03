@@ -54,7 +54,7 @@ $result = $crud->read($sql);
 
                 <ul class="nav-list">
                     <li class="list-item ">
-                        <a href="/IT26/BARANGAY/dashboard-1/dashboard.html">
+                        <a href="/IT26/BARANGAY/dashboard-1/dashboard.php">
                             <i class='bx bx-grid-alt'></i>
                             <span class="link-name">Dashboard</span>
                         </a>
@@ -70,7 +70,7 @@ $result = $crud->read($sql);
                         </a>
                     </li>
                     <li class="list-item active">
-                        <a href="/IT26/BARANGAY/dashboard-residence/CdashboardPersonel.html">
+                        <a href="/IT26/BARANGAY/dashboard-residence/CdashboardPersonel.php">
                             <i class='bx bx-message-square-dots'></i>
                             <span class="link-name">Community Record</span>
                         </a>
@@ -96,17 +96,12 @@ $result = $crud->read($sql);
                     <li class="list-item">
                         <a href="#">
                             <i class='bx bx-folder'></i>
-                            <span class="link-name">Crime List</span>
+                            <span class="link-name">Blotter List</span>
                         </a>
                     </li>
+                    
                     <li class="list-item">
-                        <a href="#">
-                            <i class='bx bx-tired'></i>
-                            <span class="link-name">Diseasse List</span>
-                        </a>
-                    </li>
-                    <li class="list-item">
-                        <a href="/IT26/BARANGAY/dashboard-3/dashboard.html">
+                        <a href="/IT26/BARANGAY/dashboard-3/dashboard.php">
                             <i class='bx bx-food-menu'></i>
                             <span class="link-name">Requested Document</span>
                         </a>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +21,7 @@
                 </div>
                 <div>
                     <div>
-                        <h6>MYKO XIREN</h6>
+                    <a href="logout.php"><h6>MYKO XIREN</h6></a>
                     </div>
                 </div>
             </div>
@@ -33,8 +34,8 @@
                 </div>
 
                 <ul class="nav-list">
-                    <li class="list-item">
-                        <a href="/IT26/BARANGAY/dashboard-1/dashboard.html">
+                    <li class="list-item active">
+                        <a href="/IT26/BARANGAY/dashboard-1/dashboard.php">
                             <i class='bx bx-grid-alt'></i>
                             <span class="link-name">Dashboard</span>
                         </a>
@@ -44,13 +45,13 @@
                         <p>MENU</p>
                     </div>
                     <li class="list-item">
-                        <a href="#">
+                        <a href="/IT26/BARANGAY/dashboard-residence/CdashboardPersonel.php">
                             <i class='bx bx-user'></i>
                             <span class="link-name">Personel</span>
                         </a>
                     </li>
                     <li class="list-item">
-                        <a href="/IT26/BARANGAY/dashboard-2/Cdashboard.html">
+                        <a href="/IT26/BARANGAY/dashboard-residence/Cdashboard.php">
                             <i class='bx bx-message-square-dots'></i>
                             <span class="link-name">Community Record</span>
                         </a>
@@ -76,17 +77,12 @@
                     <li class="list-item">
                         <a href="#">
                             <i class='bx bx-folder'></i>
-                            <span class="link-name">Crime List</span>
+                            <span class="link-name">Blotter List</span>
                         </a>
                     </li>
+                   
                     <li class="list-item">
-                        <a href="#">
-                            <i class='bx bx-tired'></i>
-                            <span class="link-name">Diseasse List</span>
-                        </a>
-                    </li>
-                    <li class="list-item active">
-                        <a href="/IT26/BARANGAY/dashboard-3/dashboard.html">
+                        <a href="/IT26/BARANGAY/dashboard-3/dashboard.php">
                             <i class='bx bx-food-menu'></i>
                             <span class="link-name">Requested Document</span>
                         </a>
@@ -108,11 +104,39 @@
         </div>
         <div class="invi-div">
         </div>
-
-
-        
-        
+        <div class="content">
+            <div class="contents-div">
+                <div class="dashboard-content">
+                    <p>POPULATION</p>
+                </div>
+                <div class="dashboard-content">
+                    <p>MALE</p>
+                </div>
+                <div class="dashboard-content">
+                    <p>FEMALE</p>
+                </div>
+                <div class="dashboard-content">
+                    <p>VOTERS</p>
+                </div>
+                <div class="dashboard-content">
+                    <p>NON-VOTERS</p>
+                </div>
+                <div class="dashboard-content">
+                    <p>PRECINT</p>
+                </div>
+                <div class="dashboard-content">
+                    <p>PUROK</p>
+                </div>
+                <div class="dashboard-content">
+                    <p>BLOTTER</p>
+                </div>
+                <div class="dashboard-content">
+                    <p>REVENUE</p>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="dashboard.js"></script>
 </body>
 </html>
+
