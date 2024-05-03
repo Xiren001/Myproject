@@ -258,7 +258,7 @@ $result = $crud->read($sql);
         </div>
     </div>
     <?php include('add_modal.php'); ?>
-    <script src="CdashboardPersonel.js"></script>
+    <script src="Cdashboard.js"></script>
 </body>
 
 </html>

@@ -312,6 +312,30 @@
 								</div>
 
 
+								
+			
+							</div>
+
+							<div class="con-2">
+								<div class="row">
+									
+									<div class="con-modal">
+										<label class="control-label">term start:</label>
+										<input type="text" class="form-control" name="termstart" autocomplete="off" value="<?php echo $row['termstart']; ?>" required>
+									</div>
+									<div class="con-modal">
+										<label class="control-label">term end:</label>
+										<input type="text" class="form-control" name="termend" autocomplete="off" value="<?php echo $row['termend']; ?>" required>
+									</div>
+
+									<div class="con-modal">
+										<label class="control-label">status:</label>
+										<input type="text" class="form-control" name="status" autocomplete="off" value="<?php echo $row['status']; ?>" required>
+									</div>
+
+									
+								</div>
+
 								<div class="row">
 
 									<div class="con-modal">
@@ -350,28 +374,6 @@
 									</div>
 
 
-								</div>
-								
-							</div>
-
-							<div class="con-2">
-								<div class="row">
-									
-									<div class="con-modal">
-										<label class="control-label">term start:</label>
-										<input type="text" class="form-control" name="termstart" autocomplete="off" value="<?php echo $row['termstart']; ?>" required>
-									</div>
-									<div class="con-modal">
-										<label class="control-label">term end:</label>
-										<input type="text" class="form-control" name="termend" autocomplete="off" value="<?php echo $row['termend']; ?>" required>
-									</div>
-
-									<div class="con-modal">
-										<label class="control-label">status:</label>
-										<input type="text" class="form-control" name="status" autocomplete="off" value="<?php echo $row['status']; ?>" required>
-									</div>
-
-									
 								</div>
 
 
